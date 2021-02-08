@@ -24,6 +24,7 @@ Next, I create a workflow diagram from the one-pager description. This workflow 
 
 With the workflow diagram completed, I start from the entry point and created a task list to complete that one box or line on the diagram. This could be a single task it in can be completed in a day; otherwise, it ends up being a dscription of what needs to be accomplished and a list of subtasks are created in single day chunks until the task is completely tasked out. Then it is on to the next box or line in the work flow. Sometimes, there are multiple entry points so each of those are addressed in the same manner.
 
+### Sample Task Breakdown
 # Landing Page Service
 
 ## Capture emails (post request to database, send email)
