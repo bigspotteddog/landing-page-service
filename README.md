@@ -1,16 +1,16 @@
 # How to Plan and Build a Project from Scratch
 
-"I have an project idea I would like build, but I don't know where to start." I have seen this statment made many times and I often find that I say this to myself too. Whether you are a beginner or an experienced developer, "writer's block" is likely to occur without doing the very short and simple steps described here I use to get myself started.
+"I have an idea for a project I would like build, but I don't know where to start." I have seen this statment made many times and I often find that I say this to myself too. Whether you are a beginner or an experienced developer, "writer's block" is likely to occur without doing the very short and simple steps described in this document.
 
-What I have learned and have been doing for many years now is to create three very short and simple artifacts before I start buildng my projects. Whether these projects are smaller personal projects or large projects with a team of developers, I have learned that these three artifacts make developing projects so much easier and they remove the writer's block I usually experience if I don't do this.
+What I have learned and have been doing for many years now is to create three very short and simple artifacts before I start buildng a project. Whether these projects are smaller personal projects or large projects with a team of developers, I have learned that these three artifacts make developing projects so much easier and they remove the writer's block I usually experience if I don't do this.
 
-The three artifacts are created in this order. A one-page description of the project in human terms. Anyone should be able to read this single page and know what the project will do. Next, a workflow diagram which is actually a combination sequence, class, and workflow diagram. Once the workflow diagram is done, a task list is created from the workflow diagram with tasks broken down into single day units of work. That's it. This process typlically takes a day or less depending on the size of the project.
+The three artifacts are created in this order. First, a one-page description of the project in human terms. Anyone should be able to read this single page and know what the project will do. Next, a workflow diagram which is actually a combination sequence, class, and workflow diagram. Once the workflow diagram is done, a task list is created from the workflow diagram with tasks broken down into single day units of work. The task list tells me where to start and what else I will be doing each day until the project is done. This process typlically takes a day or less depending on the size of the project. That's it.
 
 The following describes these three artifacts in detail using a small project as an example.
 
 ## How to Write a One-Pager
 
-A one-pager is typically single page or less that describes the project in human terms so anyone reading it will know what the project will do. I usually just start writing about the project, usually starting with the problem that needs to be solved, then go into the description of how this project solves that problem.
+A one-pager is typically single page or less that describes the project in human terms so anyone reading it will know what the project will do. I usually just start describing the project, usually starting with the problem that needs to be solved and what I want it to do.
 
 ### Sample one-pager
 
@@ -18,7 +18,7 @@ A one-pager is typically single page or less that describes the project in human
 
 We have some courses and other digital products we would like to create landing pages for that will collect the email addresses of people interested in each of these products.
 
-We would like to store these emails in a database so we can send emails to inform them about the products they are interested in. It would be nice if the system would automatically send a response email thanking the prospective customer for registering. That would give the customer an immediate response rather than waiting for us to notice that a new customer registered and then sending them an email manually much later.
+We would like to store these emails somewhere so we can send out emails to inform our prospective customers about the products they are interested in. It would be nice if the system would automatically send a response email thanking the prospective customer for registering. That would give the customer an immediate response rather than waiting for us to notice that a new customer registered and then sending them an email manually much later.
 
 Since we will have several digital products the emails sent to the customer should be tailored to the product they are interested in. That way, we can customize the email sent out for a particular product.
 
@@ -30,18 +30,18 @@ Some of the emails may have links to PDFs or other downloadable links.
 
 Once a customer purchases a product, they should no longer receive sales related emails and they should now be sent product related update emails.
 
-We would like to track where an email was submitted from so we can see which marketing campaigns were successful and which ones were not and at what point the custome converted to a sale. There could be several locations with the email input. Also, it is possible that we will add this to blog articles or other places.
+We would like to track where an email was submitted from so we can see which marketing campaigns were successful and which ones were not and at what point the customer converted. There could be several locations with the email input form and it is possible we will add this to blog articles or other places.
 
-A customer should be able to unsubscribe from receiving emails. If customer registers again after unsubscribing I would like that email address to be reactivated from wher they left off.
+A customer should be able to unsubscribe from receiving emails. If customer registers again after unsubscribing we would like that email address to be reactivated from where they left off.
 
 
 ## How to Create a Workflow Diagram
 
 Next, I create a workflow diagram from the one-pager description. This workflow diagram is a combination of a sequence diagram and a class diagram done in a workflow like form. This diagram does not use strict UML, just boxes and lines with arrows or diamonds, and a bunch on text in the whitespace to describe that part of the diagram. I often number the steps or show some form of entry point so the reader knows where to start from. The boxes are classes or screen mockups, the lines with arrows indicate the direction of flow while the lines with diamonds indicate class relationships.
 
-With the diagram completed, it is easier to review the system to see where milestones can be delineated. In the diagram below, we were able to trim out an MVP simply having the receiving handler send out a response email to get a release of some functional.
+With the diagram completed, it is easier to review the system to see milestone boundaries for releases. In the diagram below, we were able to trim out an MVP by simply having the receiving handler send out a response email instead of having to develop the automated part of the sysstem to get an inital release of something functional.
 
-Once the task breakdown step is completed (below) the tasks identified are added to the workflow diagram to show what part of the system the task builds.
+Once the task breakdown step is completed (below) the tasks identified are added to the workflow diagram to show what part of the system that task builds.
 
 ### Sample workflow diagram
 ![workflow diagram](https://github.com/bigspotteddog/landing-page-service/blob/main/landing_page_service_tasked.png?raw=true)
