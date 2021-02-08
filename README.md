@@ -48,7 +48,9 @@ Once the task breakdown step is completed (below) the tasks identified are added
 
 ## How to Create a Task Breakdown
 
-With the workflow diagram completed, I start from the entry point and created a task list to complete that one box or line on the diagram. This could be a single task it in can be completed in a day; otherwise, it ends up being a dscription of what needs to be accomplished and a list of subtasks are created in single day chunks until the task is completely tasked out. Then it is on to the next box or line in the work flow. Sometimes, there are multiple entry points so each of those are addressed in the same manner.
+With the workflow diagram completed, I start from the entry point and created a task list to complete that one box or line on the diagram. This could be a single task if it can be completed in a day; otherwise, it ends up being a dscription of what needs to be accomplished and a list of subtasks are created in single day chunks until the task is completely tasked out. Then it is on to the next box or line in the work flow. Sometimes, there are multiple entry points so each of those are addressed in the same manner.
+
+In the diagram above, the entry point for the MVP starts with the web page form at step 4.
 
 Task durations can be whatever your or your team are comfortable with. I like one day tasks because it is a single day of work. Also, one day tasks seem to be more accurate for estimating and it is easier to calculate.  With a team, you have pull requests to be reviewed then testing, so a single day of development will typically run about 3 days with 24-hour turnaround. One for development, one for review and any changes, one for testing.
 
