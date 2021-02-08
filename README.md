@@ -24,6 +24,8 @@ Next, I create a workflow diagram from the one-pager description. This workflow 
 
 With the workflow diagram completed, I start from the entry point and created a task list to complete that one box or line on the diagram. This could be a single task it in can be completed in a day; otherwise, it ends up being a dscription of what needs to be accomplished and a list of subtasks are created in single day chunks until the task is completely tasked out. Then it is on to the next box or line in the work flow. Sometimes, there are multiple entry points so each of those are addressed in the same manner.
 
+The sample task breakdown has all of the system tasked out to give a complete example. Normally, I would only task that part that is going to e built in the current release. In this case, the MVP in blue on the workflow diagram would be the only part tasked out or tasks 1 through 8 below.
+
 ### Sample Task Breakdown
 # Landing Page Service
 
