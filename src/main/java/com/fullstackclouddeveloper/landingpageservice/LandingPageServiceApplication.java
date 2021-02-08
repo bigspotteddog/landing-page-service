@@ -90,7 +90,7 @@ public class LandingPageServiceApplication {
     private Firestore getFirestore() throws IOException {
         FirestoreOptions firestoreOptions =
             FirestoreOptions.getDefaultInstance().toBuilder()
-                .setProjectId("landing-page-service")
+                .setProjectId("email-capture-service-3")
                 .setCredentials(GoogleCredentials.getApplicationDefault())
                 .build();
         return firestoreOptions.getService();
