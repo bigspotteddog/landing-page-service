@@ -16,26 +16,32 @@ A one-pager is typically single page or less that describes the project in human
 
 # Landing Page Service
 
-I have some courses and other digital products I would like to create landing pages for that will collect the email addresses of people interested in each of these products.
+We have some courses and other digital products we would like to create landing pages for that will collect the email addresses of people interested in each of these products.
 
-I would like to store these emails in a database so I can send emails to inform them about the products they are interested in. It would be nice if the system would automatically send a response email thanking the prospective customer for registering. That would give the customer an immediate response rather than waiting for me to notice that a new customer registered and then sending them an email manually.
+We would like to store these emails in a database so we can send emails to inform them about the products they are interested in. It would be nice if the system would automatically send a response email thanking the prospective customer for registering. That would give the customer an immediate response rather than waiting for us to notice that a new customer registered and then sending them an email manually much later.
 
-Since I will have several digital products the emails sent to the customer should be tailored to the product they are interested in. That way, we can customize the email sent out for a particular product.
+Since we will have several digital products the emails sent to the customer should be tailored to the product they are interested in. That way, we can customize the email sent out for a particular product.
 
-It would be nice to have the ability to create an email template for a product that way I can personalize the email with their name or other information about the product.
+It would be nice to have the ability to create an email template for a product that way we can personalize the email with their name or other information about the product.
 
-I have seen other email marketing systems that can send out a series of emails spaced out a with a couple of days in between. I would like to be able to schedule a series of emails for a product and specify the number of days in between each email and the next one.
+We have seen other email marketing systems that can send out a series of emails spaced out a with a couple of days in between. We would like to be able to schedule a series of emails for a product and specify the number of days in between each email and the next one.
+
+Some of the emails may have links to PDFs or other downloadable links.
 
 Once a customer purchases a product, they should no longer receive sales related emails and they should now be sent product related update emails.
 
-I would like to track where an email was submitted from so I can see which marketing campaigns were successful and which ones were not and at what point the custome converted to a sale. There could be several locations with the email input. Also, it is possible that I will add this to blog articles or other places.
+We would like to track where an email was submitted from so we can see which marketing campaigns were successful and which ones were not and at what point the custome converted to a sale. There could be several locations with the email input. Also, it is possible that we will add this to blog articles or other places.
 
 A customer should be able to unsubscribe from receiving emails. If customer registers again after unsubscribing I would like that email address to be reactivated from wher they left off.
 
 
 ## How to Create a Workflow Diagram
 
-Next, I create a workflow diagram from the one-pager description. This workflow diagram is a combination of a sequence diagram and a class diagram done in a workflow like form. This diagram does not use strict UML, just boxes and lines with arrows or diamonds, and a bunch on text in the whitespace to describe that part of the diagram. I often number the steps or show some form of entry point so the reader knows where to start from. The boxes are classes or screen mockups, the lines with arrows indicate the direction of flow while the lines with diamonds indicate class relationships. Once the task breakdown step is completed (below) the tasks identified are added to the workflow diagram to show what part of the system the task improves.
+Next, I create a workflow diagram from the one-pager description. This workflow diagram is a combination of a sequence diagram and a class diagram done in a workflow like form. This diagram does not use strict UML, just boxes and lines with arrows or diamonds, and a bunch on text in the whitespace to describe that part of the diagram. I often number the steps or show some form of entry point so the reader knows where to start from. The boxes are classes or screen mockups, the lines with arrows indicate the direction of flow while the lines with diamonds indicate class relationships.
+
+With the diagram completed, it is easier to review the system to see where milestones can be delineated. In the diagram below, we were able to trim out an MVP simply having the receiving handler send out a response email to get a release of some functional.
+
+Once the task breakdown step is completed (below) the tasks identified are added to the workflow diagram to show what part of the system the task builds.
 
 ### Sample workflow diagram
 ![workflow diagram](https://github.com/bigspotteddog/landing-page-service/blob/main/landing_page_service_tasked.png?raw=true)
@@ -43,6 +49,8 @@ Next, I create a workflow diagram from the one-pager description. This workflow 
 ## How to Create a Task Breakdown
 
 With the workflow diagram completed, I start from the entry point and created a task list to complete that one box or line on the diagram. This could be a single task it in can be completed in a day; otherwise, it ends up being a dscription of what needs to be accomplished and a list of subtasks are created in single day chunks until the task is completely tasked out. Then it is on to the next box or line in the work flow. Sometimes, there are multiple entry points so each of those are addressed in the same manner.
+
+Task durations can be whatever your or your team are comfortable with. I like one day tasks because it is a single day of work. Also, one day tasks seem to be more accurate for estimating and it is easier to calculate.  With a team, you have pull requests to be reviewed then testing, so a single day of development will typically run about 3 days with 24-hour turnaround. One for development, one for review and any changes, one for testing.
 
 This sample task breakdown has all of the system tasked out to give a complete example. Normally, I would only task the part that is going to be built in the current release. In this case, the MVP in blue on the workflow diagram would be the only part tasked out or tasks 1 through 9 below.
 
