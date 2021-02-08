@@ -2,7 +2,7 @@
 
 "I have an idea for a project I would like build, but I don't know where to start." I have been a Senior Software Engineer for quite a while now and I still get "writer's block" whenever I sit down to start a new project.
 
-To get myself started, I have learned to create three very short and simple artifacts before I start new a project. Whether these projects are smaller personal projects or large projects with a team of developers, I have seen that these three artifacts make developing a project much easier and they remove the writer's block I usually experience when I don't do this.
+To get myself started, I have learned to create three very short and simple artifacts before I start new a project. Whether these projects are smaller personal projects or large projects with a team of developers, I have seen that these three artifacts make developing a project much easier and they remove the "writer's block" I usually experience when I don't do this.
 
 These three artifacts are created in this order. First, a one-page description of the project in human terms. Anyone should be able to read this single page and know what the project will do. Next, a workflow diagram is created which is actually a combination sequence, class, and workflow diagram. Once the workflow diagram is done, a task list is created from the workflow diagram with tasks broken down into single day units of work. The task list tells me where to start and what else I will be doing each day until the project is done. This process typlically takes a day or less depending on the size of the project. That's it.
 
