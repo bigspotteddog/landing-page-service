@@ -18,7 +18,7 @@ A one-pager is typically single page or less that describes the project in human
 
 Next, I create a workflow diagram from the one-pager description. This workflow diagram is a combination of a sequence diagram and a class diagram done in a workflow like form. This diagram does not use strict UML, just boxes and lines with arrows or diamonds, and a bunch on text in the whitespace to describe that part of the diagram. I often number the steps or show some form of entry point so the reader knows where to start from. The boxes are classes or screen mockups, the lines with arrows indicate the direction of flow while the lines with diamonds indicate class relationships. Once the task breakdown step is completed (below) the tasks identified are added to the workflow diagram to show what part of the system the task improves.
 
-&lt;Include an workflow diagram example&gt;
+![workflow diagram](https://github.com/bigspotteddog/landing-page-service/blob/main/landing_page_service.png?raw=true)
 
 ## How to Create a Task Breakdown
 
