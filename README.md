@@ -24,7 +24,7 @@ Since we will have several digital products the emails sent to the customer shou
 
 It would be nice to have the ability to create an email template for a product that way we can personalize the email with their name or other information about the product.
 
-We have seen other email marketing systems that can send out a series of emails spaced out a with a couple of days in between. We would like to be able to schedule a series of emails for a product and specify the number of days in between each email and the next one.
+We have seen other email marketing systems that can send out a series of emails spaced out with a couple of days in between. We would like to be able to schedule a series of emails for a product and specify the number of days in between each email and the next one.
 
 Some of the emails may have links to PDFs or other downloadable links.
 
