@@ -45,7 +45,7 @@ With the workflow diagram completed, I start from the entry point and created a 
 
 * Task 7: Modify the email endpoint to send a thank you response email
 
-### This is now functional!
+### This is now a functional MVP!
 
 ## Process emails (restful processing, database)
 
