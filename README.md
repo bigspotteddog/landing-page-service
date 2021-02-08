@@ -4,7 +4,7 @@
 
 What I have learned and have been doing for many years now is to create three very short and simple artifacts before I start buildng a project. Whether these projects are smaller personal projects or large projects with a team of developers, I have learned that these three artifacts make developing projects so much easier and they remove the writer's block I usually experience if I don't do this.
 
-The three artifacts are created in this order. First, a one-page description of the project in human terms. Anyone should be able to read this single page and know what the project will do. Next, a workflow diagram which is actually a combination sequence, class, and workflow diagram. Once the workflow diagram is done, a task list is created from the workflow diagram with tasks broken down into single day units of work. The task list tells me where to start and what else I will be doing each day until the project is done. This process typlically takes a day or less depending on the size of the project. That's it.
+The three artifacts are created in this order. First, a one-page description of the project in human terms. Anyone should be able to read this single page and know what the project will do. Next, a workflow diagram is created which is actually a combination sequence, class, and workflow diagram. Once the workflow diagram is done, a task list is created from the workflow diagram with tasks broken down into single day units of work. The task list tells me where to start and what else I will be doing each day until the project is done. This process typlically takes a day or less depending on the size of the project. That's it.
 
 The following describes these three artifacts in detail using a small project as an example.
 
