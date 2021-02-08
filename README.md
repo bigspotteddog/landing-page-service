@@ -27,7 +27,7 @@ With the workflow diagram completed, I start from the entry point and created a 
 ### Sample Task Breakdown
 # Landing Page Service
 
-## Capture emails (post request to database, send email)
+## Allow customers to register with their email (post request to database, send email)
 
 ### Publish landing page
 
