@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fullstackclouddeveloper</groupId>
-	<artifactId>email-capture-service</artifactId>
+	<artifactId>landing-page-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>email-capture-service</name>
-	<description>An email capture service</description>
+	<name>landing-page-service</name>
+	<description>An landing page service</description>
 
 	<properties>
 		<java.version>11</java.version>
