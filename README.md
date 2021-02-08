@@ -18,7 +18,7 @@ A one-pager is typically a single page or less that describes the project in hum
 
 We have some courses and other digital products we would like to create landing pages for that will collect the email addresses of people interested in each of these products.
 
-We would like to store these emails somewhere so we can send out emails to inform our prospective customers about the products they are interested in. It would be nice if the system would automatically send a response email thanking the prospective customer for registering. That would give the customer an immediate response rather than waiting for us to notice that a new customer registered and then sending them an email manually much later.
+We would like to collect these emails somewhere so we can send out emails to inform our prospective customers about the products they are interested in. It would be nice if the system would automatically send a response email thanking the prospective customer for registering. That would give the customer an immediate response rather than waiting for us to notice that a new customer registered and then sending them an email manually much later.
 
 Since we will have several digital products the emails sent to the customer should be tailored to the product they are interested in. That way, we can customize the email sent out for a particular product.
 
