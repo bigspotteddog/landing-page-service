@@ -10,7 +10,7 @@ The following describes these three artifacts in detail using a small project as
 
 ## How to Write a One-Pager
 
-A one-pager is typically single page or less that describes the project in human terms so anyone reading it will know what the project will do. I usually just start describing the project, usually starting with the problem that needs to be solved and what I want it to do.
+A one-pager is typically a single page or less that describes the project in human terms so anyone reading it will know what the project will do. I usually just start describing the project, usually starting with the problem that needs to be solved and what I want it to do.
 
 ### Sample one-pager
 
