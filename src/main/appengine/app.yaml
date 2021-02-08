@@ -1,0 +1,23 @@
+runtime: java11
+
+handlers:
+  - url: (/.*)
+    static_files: BOOT-INF/classes/static\1
+    upload: BOOT-INF/classes/static/.*\.(gif|png|jpg|svg|ico|css|js|html)$
+    require_matching_file: True
+    login: optional
+    secure: optional
+
+  - url: /(.+)/
+    static_files: BOOT-INF/classes/static/\1/index.html
+    upload: BOOT-INF/classes/static/(.+)/index.html
+    require_matching_file: True
+    login: optional
+    secure: optional
+
+  - url: /
+    static_files: BOOT-INF/classes/static/index.html
+    upload: BOOT-INF/classes/static/index.html
+    require_matching_file: True
+    login: optional
+    secure: optional

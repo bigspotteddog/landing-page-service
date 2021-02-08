@@ -1,0 +1,227 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Landing Page - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+    type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">The Full Stack Cloud Developer Course</a>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5">Send me an email when registration begins!</h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form id="notify-me-form" method="POST" action="/notify-me">
+            <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+                <input name="email" type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+              </div>
+              <div class="col-12 col-md-3">
+                <button type="submit" class="btn btn-block btn-lg btn-primary">Notify me!</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-cloud-upload m-auto text-primary"></i>
+            </div>
+            <h3>Runs in the Cloud</h3>
+            <p class="lead mb-0">Create web applications that run in the cloud!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-layers m-auto text-primary"></i>
+            </div>
+            <h3>Full Stack Development</h3>
+            <p class="lead mb-0">Learn front-end, backend, database, and DevOps!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>Build confidence</h3>
+            <p class="lead mb-0">Build projects with increasing complexity!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Showcases -->
+  <section class="showcase">
+    <div class="container p-0">
+      <div class="row no-gutters">
+        <div class="col-lg-12 order-lg-1 my-auto showcase-text">
+          <h2>Course Outline</h2>
+          <p class="lead mb-0">The full stack cloud developer course leverages Google Cloud to server web applications
+            that grow in complexity as you develop your skills.</p>
+          <div class="row justify-content-center" style="margin-top: 20px;">
+            <div class="col-lg-10">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Lesson</th>
+                    <th scope="col" class="text-right">Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div>Lesson One</div>
+                      <div style="margin-top: 10px; color: #888;">
+                        This is the lesson one description. Lesson one will have sub-tasks as well.
+                      </div>
+                    </td>
+                    <td class="text-right">1:00</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="padding-left: 40px;">Task One</div>
+                      <div style="margin-top: 10px; color: #888; padding-left: 40px;">
+                        This is the lesson one task one description.
+                      </div>
+                    </td>
+                    <td class="text-right">14:00</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="padding-left: 40px;">Task Two</div>
+                      <div style="margin-top: 10px; color: #888; padding-left: 40px;">
+                        This is the lesson one task two description.
+                      </div>
+                    </td>
+                    <td class="text-right">11:00</td>
+                  </tr>
+                  <tr>
+                    <td>Lesson Two</td>
+                    <td class="text-right">2:00</td>
+                  </tr>
+                  <tr>
+                    <td>Lesson Three</td>
+                    <td class="text-right">3:00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="call-to-action text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h2 class="mb-4">Ready to get started? Sign up now and get 40% off the registration price!</h2>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form id="sign-up-form" method="POST" action="/sign-up">
+            <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+                <input name="email" type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+              </div>
+              <div class="col-12 col-md-3">
+                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">We'll notify you!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          You've been added to the list. We'll notify you when registration begins.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const submit = function(ev) {
+      ev.preventDefault();
+      const form = ev.currentTarget;
+      const email = form.elements['email'].value;
+
+      const data = {email: email};
+
+      (async() => {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+
+        const json = await response.json();
+        $('#staticBackdrop').modal('show');
+      })();
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      document.getElementById('notify-me-form').addEventListener('submit', submit); 
+      document.getElementById('sign-up-form').addEventListener('submit', submit); 
+    });
+  </script>
+</body></html>

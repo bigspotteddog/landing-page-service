@@ -18,13 +18,13 @@ A one-pager is typically single page or less that describes the project in human
 
 Next, I create a workflow diagram from the one-pager description. This workflow diagram is a combination of a sequence diagram and a class diagram done in a workflow like form. This diagram does not use strict UML, just boxes and lines with arrows or diamonds, and a bunch on text in the whitespace to describe that part of the diagram. I often number the steps or show some form of entry point so the reader knows where to start from. The boxes are classes or screen mockups, the lines with arrows indicate the direction of flow while the lines with diamonds indicate class relationships. Once the task breakdown step is completed (below) the tasks identified are added to the workflow diagram to show what part of the system the task improves.
 
-![workflow diagram](https://github.com/bigspotteddog/landing-page-service/blob/main/landing_page_service.png?raw=true)
+![workflow diagram](https://github.com/bigspotteddog/landing-page-service/blob/main/landing_page_service_tasked.png?raw=true)
 
 ## How to Create a Task Breakdown
 
 With the workflow diagram completed, I start from the entry point and created a task list to complete that one box or line on the diagram. This could be a single task it in can be completed in a day; otherwise, it ends up being a dscription of what needs to be accomplished and a list of subtasks are created in single day chunks until the task is completely tasked out. Then it is on to the next box or line in the work flow. Sometimes, there are multiple entry points so each of those are addressed in the same manner.
 
-The sample task breakdown has all of the system tasked out to give a complete example. Normally, I would only task that part that is going to e built in the current release. In this case, the MVP in blue on the workflow diagram would be the only part tasked out or tasks 1 through 8 below.
+This sample task breakdown has all of the system tasked out to give a complete example. Normally, I would only task the part that is going to be built in the current release. In this case, the MVP in blue on the workflow diagram would be the only part tasked out or tasks 1 through 9 below.
 
 ### Sample Task Breakdown
 # Landing Page Service
