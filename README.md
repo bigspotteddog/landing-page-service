@@ -39,20 +39,23 @@ A customer should be able to unsubscribe from receiving emails. If customer regi
 
 Next, I create a workflow diagram from the one-pager description. This workflow diagram is a combination of a sequence diagram and a class diagram done in a workflow like form. This diagram does not use strict UML, just boxes and lines with arrows or diamonds, and a bunch on text in the whitespace to describe that part of the diagram. I often number the steps or show some form of entry point so the reader knows where to start from. The boxes are classes or screen mockups, the lines with arrows indicate the direction of flow while the lines with diamonds indicate class relationships.
 
-With the diagram completed, it is easier to review the system to see milestone boundaries for releases. In the diagram below, we were able to trim out an MVP by simply having the receiving handler send out a response email instead of having to develop the automated part of the sysstem to get an inital release of something functional.
-
-Once the task breakdown step is completed (below) the tasks identified are added to the workflow diagram to show what part of the system that task builds.
-
 ### Sample workflow diagram
 ![workflow diagram](https://github.com/bigspotteddog/landing-page-service/blob/main/landing_page_service_tasked.png?raw=true)
 
+To create this diagram, I am using Balsamiq Mockups but you can use anything that can draw boxes and lines. I used to use paper and pencil. Balsamiq has that browser widget you see on the left but it could just as well be a box that said browser in the middle of it.
+
+I started drawing this diagram from the one-pager by going through it looking for things that need information saved in a database. Looking at the one-pager, I picked the word "product" from the first paragraph and figued it should have a name and description. Reading through the next few paragraphs, I picked out the word "email" and drew that box. Don't start connecting lines yet, just put the boxes on the diagram on the first pass. From there I put all of the other boxes on the diagram then started grouping the boxes that should be next to each other. After that, I drew the lines and put the text from the one-pager on the diagram.
+
+With the diagram completed, it is easier to review the system to see milestone boundaries for releases. In the diagram below, we were able to trim out an MVP by simply having the receiving handler send out a response email instead of having to develop the automated part of the sysstem to get an inital release of something functional.
+
+Once the task breakdown step is completed (below) the tasks identified are added to the workflow diagram to show what part of the system that task builds.
 ## How to Create a Task Breakdown
 
 With the workflow diagram completed, I start from the entry point and created a task list to complete that one box or line on the diagram. This could be a single task if it can be completed in a day; otherwise, it ends up being a dscription of what needs to be accomplished and a list of subtasks are created in single day chunks until the task is completely tasked out. Then it is on to the next box or line in the work flow. Sometimes, there are multiple entry points so each of those are addressed in the same manner.
 
 In the diagram above, the entry point for the MVP starts with the web page form at step 4.
 
-Task durations can be whatever your or your team are comfortable with. I like one day tasks because it is a single day of work. Also, one day tasks seem to be more accurate for estimating and it is easier to calculate.  With a team, you have pull requests to be reviewed then testing, so a single day of development will typically run about 3 days with 24-hour turnaround. One for development, one for review and any changes, one for testing.
+Task durations can be whatever you or your team are comfortable with. I like one day tasks because it is a single day of work. Also, one day tasks seem to be more accurate for estimating and it is easier to calculate.  With a team, you have pull requests to be reviewed then testing, so a single day of development will typically run about 3 days with 24-hour turnaround. One for development, one for review and any changes, one for testing.
 
 This sample task breakdown has all of the system tasked out to give a complete example. Normally, I would only task the part that is going to be built in the current release. In this case, the MVP in blue on the workflow diagram would be the only part tasked out or tasks 1 through 9 below.
 
