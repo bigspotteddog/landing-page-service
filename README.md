@@ -1,6 +1,6 @@
 # How to Plan and Build a Project
 
-This article describes the process I have been using for several years to plan how to build any project whether it is a smaller personal project or a large project with a team of developers. This is also the process we use on our team at work.
+This article describes the process I have been using for several years to plan how to build any project whether it is a smaller personal project or a large project with a team of developers. This is also ssimilar to the process we use on our team at work.
 
 To get started, we create three very short and simple artifacts before starting to building a new project. A one-pager, a workflow diagram, and a task list. Depending on the size of the project, this usually takes one person a day or less to complete.
 
