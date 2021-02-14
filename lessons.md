@@ -1,6 +1,6 @@
 # Lesson Plan for MVP
 
-The following is the lesson plan for building the first part of this email capture service. We will build the phase one MVP that will take us up to the point where a user can register their email, it is saved in the database, and an email response is sent to the user. This will be accomplished in approximately 10 lessons that are around 30 minutes or less.
+The following is the lesson plan for building the first part of this landing page service. We will build the phase one MVP that will take us up to the point where a user can register their email, it is saved in the database, and an email response is sent to the user. This will be accomplished in approximately 10 lessons each of which are around 30 minutes or less.
 
 ## Lessons
 
