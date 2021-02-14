@@ -21,6 +21,7 @@ Skills:
 * Create a Spring Boot application
 * index.html basics
     * HTML, HEAD, TITLE, BODY, H1
+* Add bootstrap
 #### Google Cloud Platform
 
 Since this ecommerce store will be deployed to the cloud, we will us Google Cloud Platform and we will need to install that and its prerequisite, Python.
@@ -57,6 +58,20 @@ Customers should be able to see products by catetory. Categories can be in rows 
 
 Categories can have subcategories. When a customer is browsing products, they can click on a category and the view will change to rows of subcategories within the category clicked.
 
+Skills:
+* HTML
+    * div, img, span, a or button, select, template
+* CSS
+    * class
+* Bootstrap
+    * container, row, column, grid or flexbox
+* JavaScript
+    * JSON
+        * array
+    * for loop
+    * get element by id
+    * template string substitution
+    * append element
 ##### Browse by category
 
 This is the default view.
@@ -65,6 +80,46 @@ This is the default view.
 
 There should be a keyword search at the top of the page. Products getting a search score greater than zero will be displayed in descending score order.
 
+Skills:
+* HTML, CSS, Bootstrap
+    * same as "browse products"
+* JavaScript
+    * same as "browse products"
+    * ajax REST GET request
+* Java/Spring Boot
+    * receive http get request
+    * connect to database
+    * select from table
+    * data transfer objects
+* Database
+    * Install database
+    * Create table
+    * Database normalization
+    * SQL
+        * select
+        * join
+        * where
+        * order by
+        * group by
+        * sum
+#### View product
+
+When a customer clicks on a product while browsing, they will be taken to the product view which will have a title, description, price, options, and images.
+
+Skills:
+* HTML, CSS, Bootstrap
+    * same as "browse products"
+* JavaScript
+    * same as "browse products"
+    * ajax REST GET request
+* Java/Spring Boot
+    * same as "browse products"
+* Database
+    * same as "browse products"
+    * SQL
+        * select
+        * join
+        * where 
 #### Shopping cart
 
 When a customer adds a product to their shopping cart, a counter will be displayed at the top of the page. When the customer clicks on the cart, the items in the cart will be displayed. Customers should be able to change item quantities there and they should be able to remove products.
