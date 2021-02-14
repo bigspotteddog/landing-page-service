@@ -124,14 +124,36 @@ Skills:
 
 When a customer adds a product to their shopping cart, a counter will be displayed at the top of the page. When the customer clicks on the cart, the items in the cart will be displayed. Customers should be able to change item quantities there and they should be able to remove products.
 
+Skills:
+* same as "view product"
+
 #### Checkout
 
 When a customer is viewing their cart, they will have the option to checkout. On the checkout page, the customer can add the shipping address and payment information. If the customer is logged in, they can pick between previously save shipping addresses and payment information.
+
+Skills:
+* same as "view product"
+* JavaScript
+    * Stripe js include library
+    * Stripe js send payment information to server
+    * Ajax REST POST request
+* Java
+    * receive http post request
+    * String payment processing
 
 #### Product reviews
 
 Products will have customer reviews that have a star rating, a headling and a comment. This should appear at the bottom of the product page.
 
+Skills:
+* same as "view product"
+* JavaScript
+    * Ajax REST POST request
+* Java
+    * receive http post request
+    * save information to database
+*  SQL
+    * insert informatin into database
 #### Login
 
 A customer can login to view their shopping cart and can track their current and previous orders.
