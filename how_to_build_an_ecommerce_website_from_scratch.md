@@ -44,6 +44,10 @@ When a customer adds a product to their shopping cart, a counter will be display
 
 When a customer is viewing their cart, they will have the option to checkout. On the checkout page, the customer can add the shipping address and payment information. If the customer is logged in, they can pick between previously save shipping addresses and payment information.
 
+#### Product reviews
+
+Products will have customer reviews that have a star rating, a headling and a comment. This should appear at the bottom of the product page.
+
 #### Login
 
 A customer can login to view their shopping cart and can track their current and previous orders.
