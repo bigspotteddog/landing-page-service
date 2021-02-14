@@ -14,9 +14,26 @@ The skills need to accomplish this feature are:
 
 #### Application server
 
-We will be using Java as our backend programming language and Spring Boot as the application server. We will need to install Java and run the Spring Boot initializer to create the initial application. Since this ecommerce store will be deployed to the cloud, we will us Google Cloud Platform and we will need to install that and its prerequisite, Python.
+We will be using Java as our backend programming language and Spring Boot as the application server. We will need to install Java and run the Spring Boot initializer to create the initial application.
+
+Skills:
+* Install Java
+* Create a Spring Boot application
+* index.html basics
+    * HTML, HEAD, TITLE, BODY, H1
+#### Google Cloud Platform
+
+Since this ecommerce store will be deployed to the cloud, we will us Google Cloud Platform and we will need to install that and its prerequisite, Python.
 
 Once we have installed these platform tools, we will publish the web application GCP on Google App Engine. We will want the ecommerce store to be secure so we will need to issue and configure the web application to use a SSL/TLS certificate. We will also need to register a domain and configure DNS settings.
+
+Skills:
+* Install Python
+* Install Google Cloud SDK
+* Create a GCP project
+* Deploy a project to Google App Engine
+* Register a custom domain
+* Configure our project to use HTTPS only
 
 ## What are the features of this ecommerce website?
 
