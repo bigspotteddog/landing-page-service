@@ -156,7 +156,7 @@ With the task list, I know where to start and what I will be doing one task afte
 
 # How to setup a Java development environment
 
-1. Check Java version
+1. Check for Java 11
 
     Open a terminal window and run this command:
 
