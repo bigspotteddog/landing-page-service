@@ -178,7 +178,7 @@ With the task list, I know where to start and what I will be doing one task afte
 
 1. Install Java
 
-    1. Open your browser and open https://adoptopenjdk.net/
+  1. Open your browser and open https://adoptopenjdk.net/
 
     1. Choose version: `OpenJDK 11 (LTS)`
 
