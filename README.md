@@ -176,7 +176,7 @@ With the task list, I know where to start and what I will be doing one task afte
 
     If Java 11 is already installed, skip to the `Install Java` step
 
-1. Install Java
+1. Install Java 11
 
     1. Open your browser and open https://adoptopenjdk.net/
 
