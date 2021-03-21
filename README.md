@@ -154,7 +154,7 @@ With the task list, I know where to start and what I will be doing one task afte
 
 * Task 41: Modify the scheduled process to schedule the next email template as a scheduled email
 
-# How to setup Java a development environment
+# How to setup a Java development environment
 
 1. Check Java version
 
