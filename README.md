@@ -294,3 +294,155 @@ With the task list, I know where to start and what I will be doing one task afte
         ![Spring error page](images/spring_error_page.png)
 
         This means our application is running but we have not adding anything to it yet.
+
+# How to setup a cloud environment
+
+1. Create a Google Clound account
+
+    1. Open your web browser and open https://cloud.google.com/
+
+    1. If you have not created a Google Cloud account before, click the `Get started for free` button and follow the prompts; otherwise, click the `Console` or `Sign In` button
+
+    1. Install the Google Cloud SDK
+
+        1. Check for Python 3.5 to 3.8 or Python 2.7.9 or higher
+
+            Python 3.5 to 3.8 or Python 2.7.9 is required to run the Google Cloud SDK. To verify that Python is installed and is a supported version. Do the following.
+
+            Open a terminal window and run this command:
+
+            ```
+            $ python -V
+            ```
+
+            If You should see something like this:
+
+            ```
+            $ python -V
+
+            Python 3.7.8
+            ```
+
+            If Python is already installed, skip to the `Install Python` step
+
+        1. Install Python
+
+            1. Open a web browser and open https://www.python.org/downloads/
+
+            1. Download the installer for version 3.8.x for your operating system
+
+            1. Open the downloaded package and follow the prompts to install Python 3.8
+
+        1. Install the Google Cloud SDK
+
+            1. Open your web browser and open https://cloud.google.com/sdk/docs/quickstart
+
+            1. Download the installer package for your operating system
+
+            1. Extract the downloaded archive in the folder of your choice
+
+            1. Open a terminal window and change directory into the extracted archive folder
+
+            1. Run the install script in the extracted archive folder and follow the prompts.
+
+                ```
+                $ ./install.sh
+                Welcome to the Google Cloud SDK!
+
+                To help improve the quality of this product, we collect anonymized usage data
+                and anonymized stacktraces when crashes are encountered; additional information
+                is available at <https://cloud.google.com/sdk/usage-statistics>. This data is
+                handled in accordance with our privacy policy
+                <https://cloud.google.com/terms/cloud-privacy-notice>. You may choose to opt in this
+                collection now (by choosing 'Y' at the below prompt), or at any time in the
+                future by running the following command:
+
+                    gcloud config set disable_usage_reporting false
+
+                Do you want to help improve the Google Cloud SDK (y/N)?
+                ```
+
+                ```
+                Do you want to help improve the Google Cloud SDK (y/N)?  y
+
+
+                Your current Cloud SDK version is: 332.0.0
+                The latest available version is: 332.0.0
+
+                ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+                │                                                 Components                                                 │
+                ├───────────────┬──────────────────────────────────────────────────────┬──────────────────────────┬──────────┤
+                │     Status    │                         Name                         │            ID            │   Size   │
+                ├───────────────┼──────────────────────────────────────────────────────┼──────────────────────────┼──────────┤
+                │ Not Installed │ App Engine Go Extensions                             │ app-engine-go            │  4.8 MiB │
+                │ Not Installed │ Appctl                                               │ appctl                   │ 18.5 MiB │
+                │ Not Installed │ Cloud Bigtable Command Line Tool                     │ cbt                      │  7.6 MiB │
+                │ Not Installed │ Cloud Bigtable Emulator                              │ bigtable                 │  6.6 MiB │
+                │ Not Installed │ Cloud Datalab Command Line Tool                      │ datalab                  │  < 1 MiB │
+                │ Not Installed │ Cloud Datastore Emulator                             │ cloud-datastore-emulator │ 18.4 MiB │
+                │ Not Installed │ Cloud Firestore Emulator                             │ cloud-firestore-emulator │ 41.6 MiB │
+                │ Not Installed │ Cloud Pub/Sub Emulator                               │ pubsub-emulator          │ 60.4 MiB │
+                │ Not Installed │ Cloud SQL Proxy                                      │ cloud_sql_proxy          │  7.4 MiB │
+                │ Not Installed │ Emulator Reverse Proxy                               │ emulator-reverse-proxy   │ 14.5 MiB │
+                │ Not Installed │ Google Cloud Build Local Builder                     │ cloud-build-local        │  6.2 MiB │
+                │ Not Installed │ Google Container Registry's Docker credential helper │ docker-credential-gcr    │  2.2 MiB │
+                │ Not Installed │ Kustomize                                            │ kustomize                │ 22.8 MiB │
+                │ Not Installed │ Minikube                                             │ minikube                 │ 23.7 MiB │
+                │ Not Installed │ Nomos CLI                                            │ nomos                    │ 19.8 MiB │
+                │ Not Installed │ On-Demand Scanning API extraction helper             │ local-extract            │ 10.4 MiB │
+                │ Not Installed │ Skaffold                                             │ skaffold                 │ 17.0 MiB │
+                │ Not Installed │ anthos-auth                                          │ anthos-auth              │ 16.3 MiB │
+                │ Not Installed │ config-connector                                     │ config-connector         │ 43.8 MiB │
+                │ Not Installed │ gcloud Alpha Commands                                │ alpha                    │  < 1 MiB │
+                │ Not Installed │ gcloud Beta Commands                                 │ beta                     │  < 1 MiB │
+                │ Not Installed │ gcloud app Java Extensions                           │ app-engine-java          │ 53.1 MiB │
+                │ Not Installed │ gcloud app PHP Extensions                            │ app-engine-php           │ 21.9 MiB │
+                │ Not Installed │ gcloud app Python Extensions                         │ app-engine-python        │  6.1 MiB │
+                │ Not Installed │ gcloud app Python Extensions (Extra Libraries)       │ app-engine-python-extras │ 27.1 MiB │
+                │ Not Installed │ kpt                                                  │ kpt                      │ 12.2 MiB │
+                │ Not Installed │ kubectl                                              │ kubectl                  │  < 1 MiB │
+                │ Not Installed │ kubectl-oidc                                         │ kubectl-oidc             │ 16.3 MiB │
+                │ Not Installed │ pkg                                                  │ pkg                      │          │
+                │ Installed     │ BigQuery Command Line Tool                           │ bq                       │  < 1 MiB │
+                │ Installed     │ Cloud SDK Core Libraries                             │ core                     │ 17.6 MiB │
+                │ Installed     │ Cloud Storage Command Line Tool                      │ gsutil                   │  3.9 MiB │
+                └───────────────┴──────────────────────────────────────────────────────┴──────────────────────────┴──────────┘
+                To install or remove components at your current SDK version [332.0.0], run:
+                $ gcloud components install COMPONENT_ID
+                $ gcloud components remove COMPONENT_ID
+
+                To update your SDK installation to the latest version [332.0.0], run:
+                $ gcloud components update
+
+
+                Modify profile to update your $PATH and enable shell command
+                completion?
+
+                Do you want to continue (Y/n)?
+                ```
+
+                ```
+                Do you want to continue (Y/n)?  y
+
+                The Google Cloud SDK installer will now prompt you to update an rc
+                file to bring the Google Cloud CLIs into your environment.
+
+                Enter a path to an rc file to update, or leave blank to use
+                [/Users/fullstackclouddeveloper2/.zshrc]:                
+                ```
+
+                ```
+                Backing up [/Users/fullstackclouddeveloper2/.zshrc] to [/Users/fullstackclouddeveloper2/.zshrc.backup].
+                [/Users/fullstackclouddeveloper2/.zshrc] has been updated.
+
+                ==> Start a new shell for the changes to take effect.
+
+
+                For more information on how to get started, please visit:
+                https://cloud.google.com/sdk/docs/quickstarts
+
+
+                $                
+                ```
+
+
