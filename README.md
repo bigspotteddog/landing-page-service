@@ -71,6 +71,147 @@ With the task list, I know where to start and what I will be doing one task afte
 
 ## Allow customers to register with their email (post request to database, send email)
 
+## How to setup Java a development environment
+
+1. Check Java version
+
+    Open a terminal window and run this command:
+
+    ```
+    $ java -version
+    ```
+
+    You should see something like this:
+
+    ```
+    $ java -version
+
+    openjdk version "11.0.10" 2021-01-19
+    OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.10+9)
+    OpenJDK 64-Bit Server VM AdoptOpenJDK (build 11.0.10+9, mixed mode)    
+    ```
+
+    If Java 11 is already installed, skip to the `Install Java` step
+
+1. Install Java
+
+    1. Open your browser and open https://adoptopenjdk.net/
+
+    1. Choose version: `OpenJDK 11 (LTS)`
+
+    1. Choose JVM: `HotSpot`
+
+    1. Download the latest release
+
+    1. Open the downloaded package and follow the prompts to install Java 11
+
+1. Install Maven
+
+    1. Open your browser and open https://maven.apache.org/download.cgi
+
+    1. Scroll down to `Files`
+
+    1. Click the link for your operating system
+
+        Windows: `apache-maven-*-bin.zip`
+
+        Linux: `apache-maven-*-bin.tar.gz`
+
+        Mac: `apache-maven-*-bin.tar.gz`
+
+    1. Extract the downloaded archive in the directory of your choice
+
+    1. Add the maven directory to your `PATH` variable
+
+        For Mac, open a terminal window and run the following commands:
+
+        Extract the archive to `/usr/local/share`:
+
+        ```
+        $ sudo tar zxvf ~/Downloads/apache-maven-3.6.3-bin.tar.gz --directory /usr/local/share
+
+        ```
+
+        Create a symbolic link in `/usr/local/bin`:
+
+        ```
+        $ sudo ln -s /usr/local/share/apache-maven-3.6.3/bin/mvn /usr/local/bin/mvn
+        ```
+
+        Verify the maven version installed:
+
+        ```
+        $ mvn -v
+
+        Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+        Maven home: /usr/local/share/apache-maven-3.6.3
+        Java version: 11.0.10, vendor: AdoptOpenJDK, runtime: /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+        Default locale: en_US, platform encoding: UTF-8
+        OS name: "mac os x", version: "10.15.6", arch: "x86_64", family: "mac"        
+        ```
+
+1. Initialize a Java application server with Spring Boot
+
+    1. Open your browser and open https://start.spring.io/
+    
+    1. Choose project: `Maven`
+    
+    1. Choose language: `Java`
+
+    1. Keep the selected Spring Boot version
+    
+    1. Configure project metadata:
+    
+        1. Group is your reverse domain name (the default is fine for now)
+            
+            `example: com.example`
+
+        1. Artifact is the name of this application with no spaces (the default is fine for now)
+            
+            `example: my-application`
+
+        1. Name is the human readable name of this application with spaces (the default is fine for now)
+
+            `example: My Application`
+
+        1. Description is the description for this application
+
+            `example: My first Java web application`
+
+        1. Package name is reverse domain plus the name of the application
+
+            `example: com.example.myapplication`
+
+    1. Choose packaging: `Jar`
+
+    1. Choose Java: `11`
+
+    1. Click the `Add Dependencies` button
+
+    1. Search for `Web`
+
+    1. Add `Spring Web`
+
+    1. Click the `Generate` button to download the application
+
+    1. In the directory of your choice, extract the downloaded application
+
+    1. Open a terminal window in the directory where you extracted the downloaded application
+
+    1. Run the following command to build and run your application:
+
+        ```
+        $ mvn springboot:run
+        ```
+
+    1. Open your web browser and open http://localhost:8080
+
+    1. You should see an error page like this:
+
+        ![Spring error page](images/spring_error_page.png)
+
+        This means our application is running but we have not adding anything to it yet.
+
 ## Publish landing page
 
 * Task 1: Get an application server running locally with template landing page
