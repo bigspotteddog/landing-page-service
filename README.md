@@ -539,7 +539,7 @@ With the task list, I know where to start and what I will be doing one task afte
 
 1. Add the Java extension pack to VS Code
 
-    1. Open the Extensions view. You can do this several ways. One way is to open the command palette (command + shift + p on mac), then search for install extensions.
+    1. Open the Extensions view. You can do this several ways. One way is to open the command palette (command + shift + p on mac), then search for `install extensions`.
 
     1. Search for the Java Extension Pack in the marketplace
 
