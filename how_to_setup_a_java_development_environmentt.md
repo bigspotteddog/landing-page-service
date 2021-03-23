@@ -140,9 +140,14 @@
 
     1. You should see an error page like this:
 
-        ![Spring error page](images/spring_error_page.png)
+        <h1>Whitelabel Error Page</h1>
 
-        This means our application is running but we have not adding anything to it yet.
+        This applicattion has no explicit mapping for /error so you are seeing this as a fallback.
+
+        Sat Mar 20 18:26:36 PDT 2021<br/>
+        There was an unexpected error (type=Not Found, status=404).
+
+        This means our application is running but we have not added anything to it yet.
 
 ## How to setup a cloud environment
 
