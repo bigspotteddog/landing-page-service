@@ -1,6 +1,6 @@
 # How to setup a Java development environment
 
-## How to install Java
+## How to install Java 11
 
 1. Check for Java 11
 
