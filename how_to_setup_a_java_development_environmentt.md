@@ -34,6 +34,8 @@
 
     1. Open the downloaded package and follow the prompts to install Java 11
 
+## How to install Maven
+
 1. Install Maven
 
     1. Open your browser and open https://maven.apache.org/download.cgi
@@ -78,6 +80,7 @@
         Default locale: en_US, platform encoding: UTF-8
         OS name: "mac os x", version: "10.15.6", arch: "x86_64", family: "mac"        
         ```
+## How to setup Spring Boot
 
 1. Initialize a Java application server with Spring Boot
 
@@ -369,7 +372,7 @@
             $                
             ```
 
-## How to Install Visual Studio Code
+## How to install Visual Studio Code
 
 1. Install Visual Studio Code
 
