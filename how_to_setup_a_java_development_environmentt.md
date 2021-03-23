@@ -20,7 +20,7 @@
     OpenJDK 64-Bit Server VM AdoptOpenJDK (build 11.0.10+9, mixed mode)    
     ```
 
-    If Java 11 is already installed, skip the `Install Java` step
+    If Java 11 is already installed, skip the `Install Java  11` step
 
 1. Install Java 11
 
