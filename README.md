@@ -297,7 +297,7 @@ With the task list, I know where to start and what I will be doing one task afte
 
 # How to setup a cloud environment
 
-1. Create a Google Clound account
+1. Create a Google Cloud account
 
     1. Open your web browser and open https://cloud.google.com/
 
@@ -522,3 +522,25 @@ With the task list, I know where to start and what I will be doing one task afte
             * Run `gcloud topic --help` to learn about advanced features of the SDK like arg files and output formatting
             $                
             ```
+
+# Install Visual Studio Code
+
+1. Install Visual Studio Code
+
+    1. Open your web browser and open https://code.visualstudio.com/
+
+    1. Download the build for your operating system
+
+    1. Extract the archive in the folder of your choice
+
+    1. Copy to your applications folder or leave it where it is
+
+    1. Launch Visual Studio Code by running the extracted application
+
+1. Add the Java extension pack to VS Code
+
+    1. Open the Extensions view. You can do this several ways. One way is to open the command palette (command + shift + p on mac), then search for install extensions.
+
+    1. Search for the Java Extension Pack in the marketplace
+
+    1. Click the install button to install Java support
