@@ -80,6 +80,7 @@
         Default locale: en_US, platform encoding: UTF-8
         OS name: "mac os x", version: "10.15.6", arch: "x86_64", family: "mac"        
         ```
+
 ## How to setup Spring Boot
 
 1. Initialize a Java application server with Spring Boot
