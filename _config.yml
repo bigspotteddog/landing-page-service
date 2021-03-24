@@ -9,4 +9,4 @@ include:
   - how_to_setup_a_java_development_environment.md
 header_pages:
 
-theme: jekyll-theme-architect
+theme: jekyll-theme-hacker
