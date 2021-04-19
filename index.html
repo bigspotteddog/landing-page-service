@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Full Stack Mini Course</title>
+
+    <style>
+      .video-bottom-right {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        width: 480px;
+        margin-bottom: 40px;
+        margin-right: 40px;
+        z-index: 1000;
+      }
+
+      .course-item {
+        margin-top: 20px;
+        color: #555;
+      }
+
+      #lesson-content {
+        margin-bottom: 400px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Full Stack Mini Course</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid px-4 mt-4">
+      <div class="row gx-5">
+        <div id="lesson-plan-container" class="col-sm-3">
+          <div class="row">
+            <div id="lesson-plan-content" class="col-sm-12 shadow p-4">
+              <div class="fw-bold">Contents</div>
+              <nav>
+                <div class="row course-item">
+                  <div class="col-sm-1 circle">1</div> <div class="col-sm-10 text"><a href="#project_overview" data-youtube="https://www.youtube.com/embed/sjlNY5jLZHM">Project overview</a></div>
+                </div>
+                <div class="row course-item">
+                  <div class="col-sm-1 circle">2</div> <div class="col-sm-10 text"><a href="#how_to_setup_a_java_development_environment" data-youtube="https://www.youtube.com/embed/ZMXNqMfoeWE">How to set up a Java development environment</a></div>
+                </div>
+                <div class="row course-item">
+                  <div class="col-sm-1 circle">3</div> <div class="col-sm-10 text"><a href="#how_to_publish_a_website" data-youtube="https://www.youtube.com/embed/17ETk7EQRvU">How to Publish a website</a></div>
+                </div>
+                <div class="row course-item">
+                  <div class="col-sm-1 circle">4</div> <div class="col-sm-10 text"><a href="#how_to_modify_website_template" data-youtube="https://www.youtube.com/embed/ytzZ7VBSh8o">How to modify a website template</a></div>
+                </div>
+                <div class="row course-item">
+                  <div class="col-sm-1 circle">5</div> <div class="col-sm-10 text"><a href="#how_to_send_post_request_to_server" data-youtube="https://www.youtube.com/embed/e0eEKwWGc9w">How to send post request to server</a></div>
+                </div>
+                <div class="row course-item">
+                  <div class="col-sm-1 circle">6</div> <div class="col-sm-10 text"><a href="#how_to_receive_post_request_on_server" data-youtube="https://www.youtube.com/embed/abTQoA_lSdg">How to receive post request on server</a></div>
+                </div>
+                <div class="row course-item">
+                  <div class="col-sm-1 circle">7</div> <div class="col-sm-10 text"><a href="#how_to_save_a_record_to_the_database" data-youtube="https://www.youtube.com/embed/Cp5gDDvGwAo">How to save a record to the database</a></div>
+                </div>
+                <div class="row course-item">
+                  <div class="col-sm-1 circle">8</div> <div class="col-sm-10 text"><a href="#how_to_send_an_email_to_a_user" data-youtube="https://www.youtube.com/embed/KFH3m2130FY">How to send an email to a user</a></div>
+                </div>
+                <div class="row course-item">
+                  <div class="col-sm-1 circle">9</div> <div class="col-sm-10 text"><a href="#hsow_to_show_a_popup_message_to_a_user" data-youtube="https://www.youtube.com/embed/jsMzP7_naOc">How to show a popup message to a user</a></div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div id="lesson-container" class="col-sm-9">
+          <div class="row">
+            <div id="lesson-content" class="col-sm shadow p-4">
+              <div id="video-container" class="">
+                <div id="video" class="ratio ratio-16x9 mb-4">
+                  <iframe id="youtube" rel="0" width="560" height="315" src="https://www.youtube.com/embed/sjlNY5jLZHM?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id="video-spacer" class="ratio ratio-16x9 mb-4 d-none">
+                </div>
+              </div>
+            
+              <zero-md src="project_overview.md">
+                <template data-merge="append">
+                  <style>
+                    :not(pre)>code[class*=language-], pre[class*=language-] {
+                      background: #222;
+                    }
+                    code[class*=language-], pre[class*=language-] {
+                      color: #ddd;
+                      text-shadow: none;
+                    }           
+                  </style>
+                </template>
+              </zero-md>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+    <script>
+      document.addEventListener('scroll', function(e) {
+        const container = document.getElementById('video-container');
+        const rect = container.getBoundingClientRect();
+        const video = document.getElementById('video');
+        const videoSpacer = document.getElementById('video-spacer');
+        if (rect.bottom < 0) {
+          if (!video.classList.contains("video-bottom-right")) {
+            videoSpacer.classList.remove("d-none");
+            video.classList.add("video-bottom-right");
+          }
+        } else {
+          if (video.classList.contains("video-bottom-right")) {
+            videoSpacer.classList.add("d-none");
+            video.classList.remove("video-bottom-right");
+          }
+        }
+      });
+
+      function callback(e) {
+        var e = window.e || e;
+
+        if (e.target.tagName !== 'A') {
+          return;
+        }
+
+        const youtube = e.target.getAttribute('data-youtube');
+        document.getElementById('youtube').src = youtube + "?rel=0";
+      }
+
+      if (document.addEventListener) {
+        document.addEventListener('click', callback, false);
+      } else {
+        document.attachEvent('onclick', callback);
+      }
+
+      window.addEventListener("hashchange", function(e) {
+        let hash = e.newURL;
+        hash = hash.substring(hash.indexOf('#'));
+        if (hash.startsWith('#')) {
+          hash = hash.substring(1);
+        }
+        document.getElementsByTagName('zero-md')[0].src = hash + '.md';
+      }, false);
+
+      document.getElementsByTagName('zero-md')[0].addEventListener('zero-md-error', function(e) {
+        document.getElementsByTagName('zero-md')[0].src = 'placeholder.md';
+      });
+    </script>
+  </body>
+</html>
