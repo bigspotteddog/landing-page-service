@@ -33,7 +33,7 @@
 
     <nav id="nav-bar" class="navbar navbar-dark bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Full Stack Cloud Developer - Mini Course</a>
+        <a class="navbar-brand fs-2" href="#">Full Stack Cloud Developer - Mini Course</a>
       </div>
     </nav>
 
@@ -41,7 +41,7 @@
       <div class="row gx-5">
         <div id="lesson-plan-container" class="col-sm-3">
           <div class="row">
-            <div id="lesson-plan-content" class="col-sm-12 shadow p-4">
+            <div id="lesson-plan-content" class="col-sm-12 shadow-sm border p-4">
               <div class="fw-bold">Contents</div>
               <nav>
                 <div class="row course-item">
@@ -80,15 +80,15 @@
         </div>
         <div id="lesson-container" class="col-sm-9">
           <div class="row">
-            <div id="lesson-content" class="col-sm shadow p-4">
-              <div id="video-container" class="">
-                <div id="video" class="ratio ratio-16x9 mb-4">
-                  <iframe id="youtube" rel="0" width="560" height="315" src="https://www.youtube.com/embed/sjlNY5jLZHM?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div id="video-spacer" class="ratio ratio-16x9 mb-4 d-none">
-                </div>
+            <div id="video-container" class="p-0 pb-4">
+              <div id="video" class="ratio ratio-16x9 border">
+                <iframe id="youtube" rel="0" width="560" height="315" src="https://www.youtube.com/embed/sjlNY5jLZHM?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
-            
+              <div id="video-spacer" class="ratio ratio-16x9 mb-4 d-none">
+              </div>
+            </div>
+
+            <div id="lesson-content" class="col-sm shadow-sm border p-4">
               <zero-md src="project_overview.md">
                 <template data-merge="append">
                   <style>
