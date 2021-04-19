@@ -1,6 +1,7 @@
 runtime: java11
 
 handlers:
+  # serve static content from the static folder
   - url: (/.*)
     static_files: BOOT-INF/classes/static\1
     upload: BOOT-INF/classes/static/.*\.(gif|png|jpg|svg|ico|css|js|html)$
@@ -8,6 +9,7 @@ handlers:
     login: optional
     secure: optional
 
+  # set the default document to index.html for all folders
   - url: /(.+)/
     static_files: BOOT-INF/classes/static/\1/index.html
     upload: BOOT-INF/classes/static/(.+)/index.html
@@ -15,6 +17,7 @@ handlers:
     login: optional
     secure: optional
 
+  # set the default document for the domain root
   - url: /
     static_files: BOOT-INF/classes/static/index.html
     upload: BOOT-INF/classes/static/index.html
