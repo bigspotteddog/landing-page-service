@@ -1,5 +1,7 @@
 runtime: java11
 
+entrypoint: java -noverify BOOT-INF/resources/:BOOT-INF/classes/:BOOT-INF/lib/* com.fullstackclouddeveloper.landingpageservice.LandingPageServiceApplication
+
 handlers:
   # serve static content from the static folder
   - url: (/.*)
@@ -9,18 +11,19 @@ handlers:
     login: optional
     secure: optional
 
-  # set the default document to index.html for all folders
+  # index files
   - url: /(.+)/
     static_files: BOOT-INF/classes/static/\1/index.html
     upload: BOOT-INF/classes/static/(.+)/index.html
-    require_matching_file: True
-    login: optional
-    secure: optional
+    expiration: "15m"
 
-  # set the default document for the domain root
+  - url: /(.+)
+    static_files: BOOT-INF/classes/static/\1/index.html
+    upload: BOOT-INF/classes/static/(.+)/index.html
+    expiration: "15m"
+
+  # site root
   - url: /
     static_files: BOOT-INF/classes/static/index.html
     upload: BOOT-INF/classes/static/index.html
-    require_matching_file: True
-    login: optional
-    secure: optional
+    expiration: "15m"
