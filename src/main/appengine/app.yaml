@@ -15,15 +15,18 @@ handlers:
   - url: /(.+)/
     static_files: BOOT-INF/classes/static/\1/index.html
     upload: BOOT-INF/classes/static/(.+)/index.html
-    expiration: "15m"
+    login: optional
+    secure: optional
 
   - url: /(.+)
     static_files: BOOT-INF/classes/static/\1/index.html
     upload: BOOT-INF/classes/static/(.+)/index.html
-    expiration: "15m"
+    login: optional
+    secure: optional
 
   # site root
   - url: /
     static_files: BOOT-INF/classes/static/index.html
     upload: BOOT-INF/classes/static/index.html
-    expiration: "15m"
+    login: optional
+    secure: optional
