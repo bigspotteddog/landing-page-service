@@ -89,7 +89,7 @@
             </div>
 
             <div id="lesson-content" class="col-sm shadow-sm border p-4">
-              <zero-md src="introduction.md">
+              <zero-md src="/course/full-stack-cloud-developer-mini-course/introduction.md">
                 <template data-merge="append">
                   <style>
                     :not(pre)>code[class*=language-], pre[class*=language-] {
@@ -152,7 +152,7 @@
         if (hash.startsWith('#')) {
           hash = hash.substring(1);
         }
-        document.getElementsByTagName('zero-md')[0].src = hash + '.md';
+        document.getElementsByTagName('zero-md')[0].src = '/course/full-stack-cloud-developer-mini-course/' + hash + '.md';
       }, false);
 
       document.getElementsByTagName('zero-md')[0].addEventListener('zero-md-error', function(e) {
