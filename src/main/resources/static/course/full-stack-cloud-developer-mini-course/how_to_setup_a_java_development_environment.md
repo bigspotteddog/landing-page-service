@@ -1,5 +1,7 @@
 # How to set up a Java development environment
 
+In this lesson, we will install Java 11 and Apache Maven, a Java build tool. We will also create a web application using Spring Boot Initializr and we will use Visual Studio Code to add a "hello world" response handler to our new web application. Finally, we will set up a Google Cloud Platform account and deploy our new web application to the cloud.
+
 ## How to install Java 11
 
 1. Check for Java 11
@@ -158,6 +160,36 @@
 
         This means our application is running but we have not added anything to it yet.
 
+## How to install Visual Studio Code
+
+1. Install Visual Studio Code
+
+    1. Open your web browser and open https://code.visualstudio.com/
+
+    1. Download the build for your operating system
+
+    1. Extract the archive in the folder of your choice
+
+    1. Copy to your applications folder or leave it where it is
+
+    1. Launch Visual Studio Code by running the extracted application
+
+1. Add command line launcher
+
+    1. Open the command pallete `Cmd + Shift + P`
+
+    1. Search for `code`
+
+    1. Select `Shell Command: install 'code' command in PATH`
+
+1. Add the Java extension pack to VS Code
+
+    1. Open the Extensions view. You can do this several ways. One way is to open the command palette `Cmd + Shift + P`, then search for `install extensions`.
+
+    1. Search for the Java Extension Pack in the marketplace
+
+    1. Click the install button to install Java support
+
 ## Add a default response to our web application
 
 1. Open the downloaded Spring Boot project in VS Code
@@ -204,36 +236,6 @@
     ```text
     Hello world!
     ```
-
-## How to install Visual Studio Code
-
-1. Install Visual Studio Code
-
-    1. Open your web browser and open https://code.visualstudio.com/
-
-    1. Download the build for your operating system
-
-    1. Extract the archive in the folder of your choice
-
-    1. Copy to your applications folder or leave it where it is
-
-    1. Launch Visual Studio Code by running the extracted application
-
-1. Add command line launcher
-
-    1. Open the command pallete `Cmd + Shift + P`
-
-    1. Search for `code`
-
-    1. Select `Shell Command: install 'code' command in PATH`
-
-1. Add the Java extension pack to VS Code
-
-    1. Open the Extensions view. You can do this several ways. One way is to open the command palette `Cmd + Shift + P`, then search for `install extensions`.
-
-    1. Search for the Java Extension Pack in the marketplace
-
-    1. Click the install button to install Java support
 
 ## How to set up a cloud environment
 

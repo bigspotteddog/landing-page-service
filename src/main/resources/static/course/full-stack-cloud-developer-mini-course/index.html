@@ -77,10 +77,10 @@
               <nav>
                 <ol>
                 <li class="course-item">
-                  <div class="text"><a href="#introduction" data-youtube="https://www.youtube.com/embed/lk24qqVWbIs">Introduction</a> (6:02)</div>
+                  <div class="text"><a id="introduction" href="#introduction" data-youtube="https://www.youtube.com/embed/lk24qqVWbIs">Introduction</a> (6:02)</div>
                 </li>
                 <li class="course-item">
-                  <div class="text"><a href="#how_to_setup_a_java_development_environment" data-youtube="https://www.youtube.com/embed/rUrSTKhwtPQ">How to set up a Java development environment</a> (31:04)</div>
+                  <div class="text"><a id="how_to_setup_a_java_development_environment" href="#how_to_setup_a_java_development_environment" data-youtube="https://www.youtube.com/embed/rUrSTKhwtPQ">How to set up a Java development environment</a> (31:04)</div>
                     <ol style="list-style-type: lower-alpha;">
                       <li>
                         <div class="text">How to install Java 11 (3:12)</div>
@@ -117,7 +117,7 @@
                     </ol>
                   </li>
                   <li class="course-item">
-                    <div class="text"><a href="#how_to_publish_a_website" data-youtube="https://www.youtube.com/embed/17ETk7EQRvU">How to publish a website</a> (9:37)</div>
+                    <div class="text"><a id="how_to_publish_a_website" href="#how_to_publish_a_website" data-youtube="https://www.youtube.com/embed/17ETk7EQRvU">How to publish a website</a> (9:37)</div>
                     <ol style="list-style-type: lower-alpha;">
                       <li>
                         <div class="text">Serving static files (2:50)</div>
@@ -128,18 +128,15 @@
                     </ol>
                   </li>
                   <li class="course-item">
-                    <div class="text"><a href="#how_to_modify_website_template" data-youtube="https://www.youtube.com/embed/ytzZ7VBSh8o">How to modify a website template</a> (24:38)</div>
+                    <div class="text"><a id="how_to_modify_website_template" href="#how_to_modify_website_template" data-youtube="https://www.youtube.com/embed/ytzZ7VBSh8o">How to modify a web page</a> (24:38)</div>
                     <ol style="list-style-type: lower-alpha;">
                       <li>
-                        <div class="text">Service static files (22:08)</div>
-                      </li>
-                      <li>
-                        <div class="text">Setting the default document (2:30)</div>
+                        <div class="text">Use Chrome developer tools to modify a web page (22:06)</div>
                       </li>
                     </ol>
                   </li>
                   <li class="course-item">
-                    <div class="text"><a href="#how_to_send_post_request_to_server" data-youtube="https://www.youtube.com/embed/e0eEKwWGc9w">How to send post request to server</a> (17:57)</div>
+                    <div class="text"><a id="how_to_send_post_request_to_server" href="#how_to_send_post_request_to_server" data-youtube="https://www.youtube.com/embed/e0eEKwWGc9w">How to send post request to server</a> (17:57)</div>
                     <ol style="list-style-type: lower-alpha;">
                       <li>
                         <div class="text">Adding JavaScript to a web page (6:02)</div>
@@ -156,10 +153,10 @@
                     </ol>                  
                   </li>
                   <li class="course-item">
-                    <div class="text"><a href="#how_to_receive_post_request_on_server" data-youtube="https://www.youtube.com/embed/abTQoA_lSdg">How to receive post request on server</a> (8:05)</div>
+                    <div class="text"><a id="how_to_receive_post_request_on_server" href="#how_to_receive_post_request_on_server" data-youtube="https://www.youtube.com/embed/abTQoA_lSdg">How to receive post request on server</a> (8:05)</div>
                   </li>
                   <li class="course-item">
-                    <div class="text"><a href="#how_to_save_a_record_to_the_database" data-youtube="https://www.youtube.com/embed/Cp5gDDvGwAo">How to save a record to the database</a> (12:29)</div>
+                    <div class="text"><a id="how_to_save_a_record_to_the_database" href="#how_to_save_a_record_to_the_database" data-youtube="https://www.youtube.com/embed/Cp5gDDvGwAo">How to save a record to the database</a> (12:29)</div>
                     <ol style="list-style-type: lower-alpha;">
                       <li>
                         <div class="text">Setting up a Firestore database (8:32)</div>
@@ -173,7 +170,7 @@
                     </ol>                  
                   </li>
                   <li class="course-item">
-                    <div class="text"><a href="#how_to_send_an_email_to_a_user" data-youtube="https://www.youtube.com/embed/KFH3m2130FY">How to send an email to a user</a> (19:25)</div>
+                    <div class="text"><a id="how_to_send_an_email_to_a_user" href="#how_to_send_an_email_to_a_user" data-youtube="https://www.youtube.com/embed/KFH3m2130FY">How to send an email to a user</a> (19:25)</div>
                     <ol style="list-style-type: lower-alpha;">
                       <li>
                         <div class="text">Setting up an email service (9:04)</div>
@@ -187,7 +184,7 @@
                     </ol>                     
                   </li>
                   <li class="course-item">
-                    <div class="text"><a href="#how_to_show_a_popup_message_to_a_user" data-youtube="https://www.youtube.com/embed/jsMzP7_naOc">How to show a popup message to a user</a> (4:01)</div>
+                    <div class="text"><a id="how_to_show_a_popup_message_to_a_user" href="#how_to_show_a_popup_message_to_a_user" data-youtube="https://www.youtube.com/embed/jsMzP7_naOc">How to show a popup message to a user</a> (4:01)</div>
                   </li>
                 </ol>
               </nav>
@@ -259,7 +256,7 @@
 
         const youtube = e.target.getAttribute('data-youtube');
         if (youtube) {
-          document.getElementById('youtube').src = youtube + "?rel=0";
+          showVideo(youtube);
         }
       }
 
@@ -269,25 +266,38 @@
         document.attachEvent('onclick', callback);
       }
 
-      window.addEventListener("hashchange", function(e) {
-        let hash = e.newURL;
+      function showDocuments(hash) {
         hash = hash.substring(hash.indexOf('#'));
         if (hash.startsWith('#')) {
           hash = hash.substring(1);
         }
         if (hash.length > 0) {
+          const youtube = document.getElementById(hash).getAttribute("data-youtube");
+          if (youtube) {
+            document.getElementById('youtube').src = youtube + "?rel=0";
+          }
           document.getElementsByTagName('zero-md')[0].src = '/course/full-stack-cloud-developer-mini-course/' + hash + '.md';
         }
+      }
+
+      window.addEventListener("hashchange", function(e) {
+        let hash = e.newURL;
+        showDocuments(hash);
       }, false);
 
       document.getElementsByTagName('zero-md')[0].addEventListener('zero-md-error', function(e) {
         document.getElementsByTagName('zero-md')[0].src = 'placeholder.md';
       });
 
-      document.getElementById("close-video").onclick = function(ev) {
-        ev.preventDefault();
+      document.getElementById("close-video").onclick = function(e) {
+        e.preventDefault();
         document.getElementById("video").classList.add('d-none');
       }
+
+      document.addEventListener("DOMContentLoaded", function(et) {
+        const hash = window.location.href;
+        showDocuments(hash);
+      });
     </script>
   </body>
 </html>

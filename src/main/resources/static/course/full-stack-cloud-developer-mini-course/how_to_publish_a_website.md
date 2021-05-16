@@ -10,7 +10,7 @@ In this lesson, we will download a free bootstrap template from https://startboo
 
         ![Landing page](/images/landing-page.jpeg)
 
-    1. Extract the template
+    1. Extract the downloaded template
 
     1. Copy the extracted contents into your project's static folder (assuming `startbootstrap-landing-page-gh-pages`)
 
