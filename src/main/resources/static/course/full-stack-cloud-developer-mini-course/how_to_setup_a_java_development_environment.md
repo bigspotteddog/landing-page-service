@@ -2,6 +2,8 @@
 
 In this lesson, we will install Java 11 and Apache Maven, a Java build tool. We will also create a web application using Spring Boot Initializr and we will use Visual Studio Code to add a "hello world" response handler to our new web application. Finally, we will set up a Google Cloud Platform account and deploy our new web application to the cloud.
 
+The video above will walk you through the set up and installation.
+
 ## How to install Java 11
 
 1. Check for Java 11

@@ -1,11 +1,81 @@
 # How to show a popup message to a user
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed leo lectus. In at quam sed purus gravida iaculis. Ut lacinia dui nec sodales scelerisque. Nullam ultricies a nisi sed pretium. Duis commodo id dui sed tincidunt. Integer in sem in diam scelerisque ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus accumsan, libero et elementum pellentesque, turpis odio ultrices ante, a scelerisque lacus nisi sit amet tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur quis elementum massa, nec pulvinar nunc. Nulla et tellus tincidunt, commodo tortor in, dapibus erat. Nunc libero ex, dapibus id convallis eu, varius id orci. Sed pharetra ornare aliquam. Maecenas dignissim, nisl sed lacinia commodo, magna lacus consequat mi, id suscipit est purus pretium tortor.
+In this lesson, we will use a Bootstrap modal dialog to show the user a `Thank you` message after they have clicked the `Notify me!` button.
 
-Donec scelerisque eleifend sem, id ultrices magna venenatis eget. Vivamus gravida dapibus augue. Vestibulum porttitor erat a bibendum dignissim. Sed condimentum congue dolor. Integer euismod erat vitae ex ultricies, in tempus augue malesuada. Donec laoreet elementum mauris nec vestibulum. Morbi et bibendum ipsum. Praesent commodo tristique leo fermentum viverra. In hac habitasse platea dictumst. Maecenas in eros eu ipsum bibendum dictum. Quisque at augue in neque tincidunt scelerisque in eget velit. Nulla in facilisis lorem. Integer quis rutrum nulla.
+## Adding the Bootstrap modal dialog to our web page
 
-Maecenas quis justo vel leo egestas vehicula sed eu magna. Donec tristique magna quis tellus interdum aliquam. In a est dolor. In sed porttitor nunc. Nulla facilisi. Aliquam erat volutpat. Nullam convallis, nisi et pulvinar feugiat, tellus mauris vulputate ex, eget laoreet purus leo ac ante. Etiam laoreet efficitur metus, quis sollicitudin dui suscipit sed.
+1. Add the Bootstrap dialog to our index.html page
 
-Ut imperdiet at nisi ut tempor. Duis laoreet, nisl id posuere aliquam, lacus lacus rutrum sem, ac faucibus felis metus non nisi. Nullam varius venenatis tristique. Aenean non turpis ac orci convallis laoreet nec in ex. Nunc congue hendrerit nisl, at viverra orci suscipit in. Aenean scelerisque a nunc eget aliquam. Vivamus tincidunt ante egestas nunc malesuada ultricies. Maecenas imperdiet mauris id metus viverra, sit amet venenatis odio semper. Duis ut dui at ante facilisis euismod. Nullam faucibus nisi nec nibh dictum, id volutpat lorem consectetur.
+    Follow along with the video to learn how to add the `Thank you` modal dialog message to our web page
 
-Aenean iaculis magna vel dolor euismod, eu convallis urna consequat. Nullam magna turpis, rutrum quis bibendum vitae, aliquam et tellus. Nullam condimentum dictum urna, eget pretium sapien elementum mollis. Aenean vel facilisis ante. Fusce vitae dolor sed quam dignissim hendrerit. Aliquam erat volutpat. Vivamus hendrerit imperdiet arcu nec ornare. Donec ante risus, rhoncus non magna a, ornare feugiat eros. Cras non malesuada nibh, eu pulvinar erat. Pellentesque volutpat ipsum ac magna scelerisque, et accumsan diam convallis. Nulla at massa at tellus bibendum aliquam. Ut ac elit tortor. Donec non maximus ex. Pellentesque at dui eu felis lobortis convallis ut quis elit.
+    1. Open the index.html page in VS Code
+
+    1. Open your browser to https://getbootstrap.com/docs/4.0/components/modal/ to look through Bootstrap modal examples
+
+    1. Find an example modal dialog we will use
+
+    1. Paste and modify the example into our index.html page
+
+        The new `Thank you` modal dialog will look like this:
+
+        ```text
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">We'll notify you!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                You've been added to the list. We'll notify you when registration begins.
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>        
+        ```
+
+    1. Modify the URL Fetch function call to open our `Thank you` modal dialog
+
+        The modified form submit function will look like this:
+
+        ```text
+        <script>
+        $(form).on('submit', function(ev) {
+          // This prevents the form from doing its default
+          // submit behavior.
+          ev.preventDefault();
+
+          // Use JavaScript to post the email address to the
+          // server instead of posting to a new page.
+
+          // First, get the email address from the form.
+          var form = $(ev.currentTarget);
+          var email = form.find('input[name="email"]').val();
+
+          // Now, send the email as JSON data
+          const data = { email: email };
+
+          fetch(form.attr('action'), {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+              body: JSON.stringify(data),
+          })
+          .then(response => response.json())
+          .then(data => {
+            $('#staticBackdrop').modal('show');
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+        });
+        </script>
+        ```
+    1. Restart the server and send a new email to see what happens

@@ -2,6 +2,8 @@
 
 In this lesson, we will download a free bootstrap template from https://startbootstrap.com and copy it into our project's static folder. Then we will update our uploaded application with the new website content using the same gcloud app deploy command we used to deploy it initially.
 
+Follow along with the video that will walk you through this process step by step.
+
 1. Install a free bootstrap template:
 
     1. Open your browser and open https://startbootstrap.com
@@ -21,6 +23,8 @@ In this lesson, we will download a free bootstrap template from https://startboo
             ```text
             $ cp -R ~/Downloads/startbootstrap-landing-page-gh-pages/* ~/Downloads/my-application/src/main/resources/static/
             ```
+
+        1. Or, use your file explorer to copy the contents into your project's static folder
     
     1. Restart your web application:
 

@@ -1,11 +1,68 @@
 # How to send an email to a user
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed leo lectus. In at quam sed purus gravida iaculis. Ut lacinia dui nec sodales scelerisque. Nullam ultricies a nisi sed pretium. Duis commodo id dui sed tincidunt. Integer in sem in diam scelerisque ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus accumsan, libero et elementum pellentesque, turpis odio ultrices ante, a scelerisque lacus nisi sit amet tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur quis elementum massa, nec pulvinar nunc. Nulla et tellus tincidunt, commodo tortor in, dapibus erat. Nunc libero ex, dapibus id convallis eu, varius id orci. Sed pharetra ornare aliquam. Maecenas dignissim, nisl sed lacinia commodo, magna lacus consequat mi, id suscipit est purus pretium tortor.
+In this lesson, we will learn how to set up an email service provider account on Google App Engine using SendGrid. Next, we will create an email in Java using the SendGrid Java API. Then, we will set up authentication for our domain to have the emails sent from our domain instead of SendGrid's.
 
-Donec scelerisque eleifend sem, id ultrices magna venenatis eget. Vivamus gravida dapibus augue. Vestibulum porttitor erat a bibendum dignissim. Sed condimentum congue dolor. Integer euismod erat vitae ex ultricies, in tempus augue malesuada. Donec laoreet elementum mauris nec vestibulum. Morbi et bibendum ipsum. Praesent commodo tristique leo fermentum viverra. In hac habitasse platea dictumst. Maecenas in eros eu ipsum bibendum dictum. Quisque at augue in neque tincidunt scelerisque in eget velit. Nulla in facilisis lorem. Integer quis rutrum nulla.
+The video will walk you through the process step-by-step.
 
-Maecenas quis justo vel leo egestas vehicula sed eu magna. Donec tristique magna quis tellus interdum aliquam. In a est dolor. In sed porttitor nunc. Nulla facilisi. Aliquam erat volutpat. Nullam convallis, nisi et pulvinar feugiat, tellus mauris vulputate ex, eget laoreet purus leo ac ante. Etiam laoreet efficitur metus, quis sollicitudin dui suscipit sed.
+## Set up an email service provider on Google App Engine
 
-Ut imperdiet at nisi ut tempor. Duis laoreet, nisl id posuere aliquam, lacus lacus rutrum sem, ac faucibus felis metus non nisi. Nullam varius venenatis tristique. Aenean non turpis ac orci convallis laoreet nec in ex. Nunc congue hendrerit nisl, at viverra orci suscipit in. Aenean scelerisque a nunc eget aliquam. Vivamus tincidunt ante egestas nunc malesuada ultricies. Maecenas imperdiet mauris id metus viverra, sit amet venenatis odio semper. Duis ut dui at ante facilisis euismod. Nullam faucibus nisi nec nibh dictum, id volutpat lorem consectetur.
+1. Set up an email service provider
 
-Aenean iaculis magna vel dolor euismod, eu convallis urna consequat. Nullam magna turpis, rutrum quis bibendum vitae, aliquam et tellus. Nullam condimentum dictum urna, eget pretium sapien elementum mollis. Aenean vel facilisis ante. Fusce vitae dolor sed quam dignissim hendrerit. Aliquam erat volutpat. Vivamus hendrerit imperdiet arcu nec ornare. Donec ante risus, rhoncus non magna a, ornare feugiat eros. Cras non malesuada nibh, eu pulvinar erat. Pellentesque volutpat ipsum ac magna scelerisque, et accumsan diam convallis. Nulla at massa at tellus bibendum aliquam. Ut ac elit tortor. Donec non maximus ex. Pellentesque at dui eu felis lobortis convallis ut quis elit.
+    Follow along with the video to set up a free SendGrid subscription.
+
+    1. Open your web browser to https://cloud.google.com/appengine/docs/standard/java11/sending-messages
+
+    1. Scroll down to `SendGrid` and click on `SendGrid Email API Plan` link: https://console.cloud.google.com/launcher/details/sendgrid-app/sendgrid-email
+
+    1. Choose the `Free` plan
+
+    1. Fill in the required information and subscribew
+
+1. Send a `Thank you` email to the email address received
+
+    Follow along with the video to find an example of the code we will use to send emails.
+
+    1. Find an example of using the SendGrid Java API
+
+        1. Open your browser to https://sendgrid.com/docs/for-developers/sending-email/v3-java-code-example
+
+        1. Find a good example to use
+
+    1. Send an email
+
+        1. Add a call to the `/notify-me` handler to call a soon to be created `sendEmail(email)` function
+
+        1. Create a `sendEmail` function in our Java application class
+
+        1. Paste and modify the SendGrid Java example we found into the `sendEmail` function
+
+            The resulting `sendEmail` function will look like this:
+
+            ```text
+            private void sendEmail(String email) throws IOException {
+                Email from = new Email("registration@fullstackclouddeveloper.com", "Fullstack Cloud Developer");
+                String subject = "Fullstack cloud developer course registration";
+                Email to = new Email(email);
+                Content content = new Content("text/plain", "You've been added to the list! We'll notify you when registration begins.");
+                Mail mail = new Mail(from, subject, to, content);
+            
+                SendGrid sg = new SendGrid(System.getenv("SENDGRID_API_KEY"));
+                Request request = new Request();
+                try {
+                request.setMethod(Method.POST);
+                request.setEndpoint("mail/send");
+                request.setBody(mail.build());
+                sg.api(request);
+                } catch (IOException ex) {
+                throw ex;
+                }
+            }
+            ```
+
+        1. Send a new email address to the server from our landing page and check your email
+
+    1. Authenticate you domain with `SendGrid` to remove their `sent via SendGrid` marketing
+
+        If you have your own domain name, you can authenticate it with `SendGrid` to remove their marketing message on the free account.
+
+        Follow along with the video for step-by-step instructions for how to do this.

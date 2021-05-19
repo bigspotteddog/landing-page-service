@@ -2,6 +2,10 @@
 
 For this project, we are going to build a landing page service that will allow interested customers to register for notifications and offers for our products. While building this full stack project, we will learn how to deploy a web application to the cloud on Google Cloud Platorm, leveraging HTML, CSS, and Javascript on the front-end, and Java on the backend. We will also learn how to store data into a database and send emails to our interested customers.
 
+These lessons make use of the terminal window. Windows users can use Git SCM (https://git-scm.com) so the commands used in these lessons will be the same or very similar.
+
+NOTE: for some of the videos, a different project was used. The instructions are the same, but sometimes I needed to use a different project for some of the steps.
+
 ## Our Stack
 
 ### Front End
@@ -52,6 +56,8 @@ A customer should be able to unsubscribe from receiving emails. If customer regi
 The workflow diagram below describes our landing page service and the resources that will fullfil the requirements from the One-Pager. The resources in blue define our minimum viable product (MVP), the thing we will build first.
 
 ![workflow diagram](https://github.com/bigspotteddog/landing-page-service/blob/main/landing_page_service_tasked.png?raw=true)
+
+**Exercise:** For each square on the workflow diagram, circle the corresponding words in the one page description.
 
 ### Landing Page Service - Task Breakdown
 

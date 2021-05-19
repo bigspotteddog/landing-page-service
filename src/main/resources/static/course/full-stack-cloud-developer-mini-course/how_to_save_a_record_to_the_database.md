@@ -1,11 +1,78 @@
 # How to save a record to the database
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed leo lectus. In at quam sed purus gravida iaculis. Ut lacinia dui nec sodales scelerisque. Nullam ultricies a nisi sed pretium. Duis commodo id dui sed tincidunt. Integer in sem in diam scelerisque ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus accumsan, libero et elementum pellentesque, turpis odio ultrices ante, a scelerisque lacus nisi sit amet tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur quis elementum massa, nec pulvinar nunc. Nulla et tellus tincidunt, commodo tortor in, dapibus erat. Nunc libero ex, dapibus id convallis eu, varius id orci. Sed pharetra ornare aliquam. Maecenas dignissim, nisl sed lacinia commodo, magna lacus consequat mi, id suscipit est purus pretium tortor.
+In this lesson, we will learn how to set up a Google Firestore database to store the email addresses received. The video will walk you through the steps for creating the database, creating a new collection (table) to store email address, and how to put the received email address into the database.
 
-Donec scelerisque eleifend sem, id ultrices magna venenatis eget. Vivamus gravida dapibus augue. Vestibulum porttitor erat a bibendum dignissim. Sed condimentum congue dolor. Integer euismod erat vitae ex ultricies, in tempus augue malesuada. Donec laoreet elementum mauris nec vestibulum. Morbi et bibendum ipsum. Praesent commodo tristique leo fermentum viverra. In hac habitasse platea dictumst. Maecenas in eros eu ipsum bibendum dictum. Quisque at augue in neque tincidunt scelerisque in eget velit. Nulla in facilisis lorem. Integer quis rutrum nulla.
+## Setting up a Firestore database
 
-Maecenas quis justo vel leo egestas vehicula sed eu magna. Donec tristique magna quis tellus interdum aliquam. In a est dolor. In sed porttitor nunc. Nulla facilisi. Aliquam erat volutpat. Nullam convallis, nisi et pulvinar feugiat, tellus mauris vulputate ex, eget laoreet purus leo ac ante. Etiam laoreet efficitur metus, quis sollicitudin dui suscipit sed.
+1. Open the Google Firestore quick start guide: https://cloud.google.com/firestore/docs/quickstart-servers
 
-Ut imperdiet at nisi ut tempor. Duis laoreet, nisl id posuere aliquam, lacus lacus rutrum sem, ac faucibus felis metus non nisi. Nullam varius venenatis tristique. Aenean non turpis ac orci convallis laoreet nec in ex. Nunc congue hendrerit nisl, at viverra orci suscipit in. Aenean scelerisque a nunc eget aliquam. Vivamus tincidunt ante egestas nunc malesuada ultricies. Maecenas imperdiet mauris id metus viverra, sit amet venenatis odio semper. Duis ut dui at ante facilisis euismod. Nullam faucibus nisi nec nibh dictum, id volutpat lorem consectetur.
+    Follow along with the video to set up the Firestore database and download the security key so we can access the database from our local machine.
 
-Aenean iaculis magna vel dolor euismod, eu convallis urna consequat. Nullam magna turpis, rutrum quis bibendum vitae, aliquam et tellus. Nullam condimentum dictum urna, eget pretium sapien elementum mollis. Aenean vel facilisis ante. Fusce vitae dolor sed quam dignissim hendrerit. Aliquam erat volutpat. Vivamus hendrerit imperdiet arcu nec ornare. Donec ante risus, rhoncus non magna a, ornare feugiat eros. Cras non malesuada nibh, eu pulvinar erat. Pellentesque volutpat ipsum ac magna scelerisque, et accumsan diam convallis. Nulla at massa at tellus bibendum aliquam. Ut ac elit tortor. Donec non maximus ex. Pellentesque at dui eu felis lobortis convallis ut quis elit.
+    1. Select our project in the Google Cloud console
+
+    1. Create a Firestore database in natvie mode
+
+    1. Set up a service account for our database
+
+    1. Create a service account key so we can access the database from our local machine
+
+1. Add the Google Firestore libraries to our application
+
+    Follow along with the video to configure Maven to load the Firestore libraries for use in our application.
+
+    1. Open our Maven pom.xml file in VS Code. The pom.xml file is in our downloaded application folder.
+
+    1. Add the Firestore libraries to our application dependencies
+
+1. Create a function to access the Firestore database in our `/notify-me` handler
+
+    Follow along with the video to add a function to access the Firestore database in our Java handler.
+
+    The resulting Java code will look something like this:
+
+    ```text
+    private Firestore getFirestore() throws IOException {
+        FirestoreOptions firestoreOptions =
+            FirestoreOptions.getDefaultInstance().toBuilder()
+                .setProjectId("my-application") // or whatever you named your project
+                .setCredentials(GoogleCredentials.getApplicationDefault())
+                .build();
+        Firestore db = firestoreOptions.getService();
+        return db;
+    }    
+    ```
+
+## Add a collection to the database to store email addresses
+
+1. Add a collection to the database to store email addresses
+
+    Follow along with the video to add a new collection to the database to store email addresses.
+
+    1. Open the Firestore console and open the `Data` tab
+
+    1. Start a new `Collection` named 'emails'
+
+## Add a new email to the database
+
+1. Add a new email to the database 
+
+    Follow along with the video to add a new email to the database.
+
+    1. Add code to the `/notify-me` handler to add a new email address to the database
+
+        The resulting Java code will look like this:
+
+        ```text
+
+        @PostMapping("/notify-me")
+        public String notifyMe(@RequestBody Map<String, String> body) throws JsonProcessingException {
+            Firestore db = getFirestore();
+            DocumentReference document = db.collection("emails").document(body.get("email"));
+            ApiFuture<WriteResult> data = document.set(body);
+            System.out.println(data.get().getUpdateTime()); 
+            return new ObjectMapper().writeValueAsString(body);
+        }    
+        ```
+
+    1. Send a new email address from the browser and view it in the Firestore console
+

@@ -1,8 +1,10 @@
 # How to modify a website template
 
-For this lesson, we will use Chrome Developer Tools to modify the web page we downloaded in the browser. This will allow us to make changes to the web page without having much knowledge of HTML or CSS yet. I use this tool a lot to figure out what HTML elements and attributes are needed and to preview what the CSS changes will look like.
+In this lesson, we will use Chrome Developer Tools to modify the web page we downloaded in the browser. This will allow us to make changes to the web page without having much knowledge of HTML or CSS yet. I use this tool a lot to figure out what HTML elements and attributes are needed and to preview what the CSS changes will look like.
 
 The Developer Tools has a selection tool that allow you to click on an element on the page, a button, some text, and it takes you to that element in the HTML source. Once you have identified the element you want to change, you can change it in the web browser. There is a way to save this to the actual HTML page and CSS. We will learn how to do that too.
+
+Follow along with the video that will walk you through the steps below.
 
 ## Open Chrome Developer Tools
 
