@@ -176,6 +176,26 @@
                   <li class="course-item">
                     <div class="text"><a id="how_to_show_a_popup_message_to_a_user" href="#how_to_show_a_popup_message_to_a_user" data-youtube="https://www.youtube.com/embed/jsMzP7_naOc">How to show a popup message to a user</a> (4:01)</div>
                   </li>
+                  <li class="course-item">
+                    <div class="text"><a id="how_to_configure_spring_boot_security" href="#how_to_configure_spring_boot_security" data-youtube="https://www.youtube.com/embed/KFH3m2130FY">How to configure spring boot for authentication</a> (00:00)</div>
+                    <ol style="list-style-type: lower-alpha;">
+                      <li>
+                        <div class="text">Adding simple security with basic authentication (0:00)</div>
+                      </li>
+                      <li>
+                        <div class="text">Upgrading form based basic authentication (0:00)</div>
+                      </li>
+                      <li>
+                        <div class="text">Adding logout (0:00)</div>
+                      </li>
+                      <li>
+                        <div class="text">Upgrading to a custom form based basic authentication (0:00)</div>
+                      </li>
+                      <li>
+                        <div class="text">Upgrading to sign in with Google and OAuth2 (0:00)</div>
+                      </li>
+                    </ol>                     
+                  </li>
                 </ol>
               </nav>
             </div>
@@ -247,6 +267,7 @@
           if (youtube) {
             document.getElementById('youtube').src = youtube + "?rel=0";
           }
+          document.getElementsByTagName('zero-md')[0].src = '';
           document.getElementsByTagName('zero-md')[0].src = '/course/full-stack-cloud-developer-mini-course/' + hash + '.md';
         }
       }

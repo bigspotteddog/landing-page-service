@@ -1,6 +1,7 @@
 package com.fullstackclouddeveloper.landingpageservice;
 
 import java.io.IOException;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
@@ -19,8 +20,11 @@ import com.sendgrid.helpers.mail.Mail;
 import com.sendgrid.helpers.mail.objects.Content;
 import com.sendgrid.helpers.mail.objects.Email;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,6 +33,9 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class LandingPageServiceApplication {
+
+    @Autowired
+    private FirestoreService firestoreService;
 
     public static void main(String[] args) {
         SpringApplication.run(LandingPageServiceApplication.class, args);
@@ -51,13 +58,19 @@ public class LandingPageServiceApplication {
         return storeAndSend(body);
     }
 
-    private String storeAndSend(Map<String, String> body)
-            throws IOException, InterruptedException, ExecutionException, JsonProcessingException {
-        Firestore db = getFirestore();
+    private String storeAndSend(Map<String, String> body) throws IOException, InterruptedException, ExecutionException {
+        Firestore db = firestoreService.getFirestore();
+
         String email = body.get("email");
+        String password = body.get("password");
+        String encryptedPassword = passwordEncoder().encode(password);
+
         DocumentReference document = db.collection("emails").document(email);
-        ApiFuture<WriteResult> data = document.set(body);
-        System.out.println(data.get().getUpdateTime()); 
+
+        Map<String, String> entity = new LinkedHashMap<>();
+        entity.put("email", email);
+        entity.put("password", encryptedPassword);
+        ApiFuture<WriteResult> data = document.set(entity);
 
         sendEmail(email);
 
@@ -83,12 +96,7 @@ public class LandingPageServiceApplication {
         }
     }
 
-    private Firestore getFirestore() throws IOException {
-        FirestoreOptions firestoreOptions =
-            FirestoreOptions.getDefaultInstance().toBuilder()
-                .setProjectId("landing-page-service-4-314216")
-                .setCredentials(GoogleCredentials.getApplicationDefault())
-                .build();
-        return firestoreOptions.getService();
+    private PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }
