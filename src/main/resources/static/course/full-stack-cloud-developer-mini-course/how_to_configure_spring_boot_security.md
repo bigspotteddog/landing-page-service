@@ -2,6 +2,8 @@
 
 In this lesson, we will learn how to add authentication to our web application. We will start with basic authentication using the browser to authenticate the user with a simple username and password. Next, we will upgrade to using a form instead of the brower dialog and we will add the ability to logout. Then, we will create a custom login form. Finally, we will use sign in with Google which will work for similarly to any other OAuth2 provider such as Facebook and GitHub.
 
+This lesson assumes you have completed the first lesson in this series, [How to set up a Java development environment](/course/full-stack-cloud-developer-mini-course/#how_to_setup_a_java_development_environment)
+
 ## Start a Spring Boot application
 
 Before we begin, we will start a new Spring Boot application to experiment with.
@@ -278,7 +280,7 @@ Next we will add a custom form for our login page. The custom form will use the 
     import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
     ```
 
-1. Create a new Thymeleaf template under a new folder `src/main/resources/templates` named `index.html`
+1. Create a new Thymeleaf template under a new folder `src/main/resources/templates` named `login.html`
 
     ```html
     <!DOCTYPE html>
@@ -405,8 +407,27 @@ To allow our users to login with Google do the following
 
     * We added `oauth2Login`
 
+1. Add the Google OAuth2 configuration settings to our `application.properties` file
+
+    1. Add a new OAuth2 client ID to your Google cloud account for your cloud application
+
+    1. Add these settings to your `application.properties` file:
+
+        ```
+        spring.security.oauth2.client.registration.google.client-id=<client id>
+        spring.security.oauth2.client.registration.google.client-secret=<client secret>
+        ```
+
+1. Restart the server
+
 1. Logout and navigate your browser to the `/` root url
 
 1. Navigate your browser to the `/app/something/else` url and see that you are asked to login with Google
 
     You may need to clear your cookies and other site data to clear out your previous login before you see login with Google.
+
+## Reference
+
+Here is the Spring Boot HttpSecurity reference:
+
+https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/builders/HttpSecurity.html
