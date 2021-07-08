@@ -413,7 +413,7 @@ To allow our users to login with Google do the following
 
     1. Add these settings to your `application.properties` file:
 
-        ```
+        ```text
         spring.security.oauth2.client.registration.google.client-id=<client id>
         spring.security.oauth2.client.registration.google.client-secret=<client secret>
         ```
