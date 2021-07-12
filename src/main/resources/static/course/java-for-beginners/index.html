@@ -264,7 +264,41 @@
                     </ol>
                   </li>
                   <li class="course-item">
-                    <div class="text"><a id="coming_soon" href="#coming_soon">Coming soon!</a></div>
+                    <div class="text"><a id="objects" href="#objects">Objects</a></div>
+                    <ol style="list-style-type: lower-alpha;">
+                      <li>
+                        <div class="text">Creating a new instance</div>
+                      </li>
+                      <li>
+                        <div class="text">Calling functions on another object</div>
+                      </li>
+                      <li>
+                        <div class="text">Object equality</div>
+                      </li>
+                      <li>
+                        <div class="text">Variable scopes</div>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="course-item">
+                    <div class="text"><a id="member_access" href="#member_access">Member access</a></div>
+                    <ol style="list-style-type: lower-alpha;">
+                      <li>
+                        <div class="text">public</div>
+                      </li>
+                      <li>
+                        <div class="text">protected</div>
+                      </li>
+                      <li>
+                        <div class="text">default</div>
+                      </li>
+                      <li>
+                        <div class="text">private</div>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="course-item">
+                    <div class="text"><a id="oo" href="#oo">Object-oriented concepts</a></div>
                   </li>
                 </ol>
               </nav>
@@ -345,7 +379,9 @@
           } else {
             document.getElementById('video-container').classList.add("d-none");
           }
-          document.getElementsByTagName('zero-md')[0].shadowRoot.children[1].innerHTML = ''
+          if (document.getElementsByTagName('zero-md')[0].shadowRoot.children.length > 1) {
+            document.getElementsByTagName('zero-md')[0].shadowRoot.children[1].innerHTML = '';
+          }
           document.getElementsByTagName('zero-md')[0].src = '/course/java-for-beginners/' + hash + '.md';
         }
       }
