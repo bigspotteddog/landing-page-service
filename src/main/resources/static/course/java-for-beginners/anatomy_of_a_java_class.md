@@ -1,33 +1,5 @@
 ## Anatomy of a Java class
 
-The following describes the structure of a Java class and its major parts.
-
-* Packages
-
-  A `package` declaration allows you to orgainize your Java classes into a folder-like structure which become folders on your hard-drive. Java classes are typically grouped into packages by behavior. The package declaration in a class is optional. If omitted, the Java class is in the `default` package.
-
-* Imports
-
-  An `import` statement allows you to include another Java class from outside of the package of `this` Java class.
-
-* Class declaration
-
-  A `class` declaration defines the Java class by giving it a name and possibly defining `interface`s the Java class implements and/or a Java class it `extends`.
- 
-* Constructors
-
-  A Java class `constructor` defines the `parameter`s that are required for a Java class `instance` to be created.
-
-* Variables
-
-  Variables can be declared at various scopes within a Java `class`. The scopes within a Java `class`. Variables declared at the `instance` level are visible to all of the code within a running `instance` of the `class`. Variables declared within a `function` or method are visible to all of the code within that `function` or method. Variables declared within a `statement` are only visible within that `statement`.
-
-  It is also possible to declare `class` level variables that are available to any running `instance` of a `class`.
-
-* Functions and methods
-
-  Java class `function`s and methods define blocks of code that may receive inputs and may produce an output. A `function` and a method are both declared with the `function` keyword. The only difference being a naming convention where `function`s return a value whereas methods do not.
-
 ### A Java class example
 
 ```java
@@ -50,7 +22,7 @@ public class MyFirstJavaApplication {
     private String name;
 
     // This is the main method entrypoint for this application
-    public static final void main(String[] args) {
+    public static void main(String[] args) {
         // Get the name passed in as a program argument
         // on the command line
         String name = args[0];
@@ -102,3 +74,41 @@ public class MyFirstJavaApplication {
     }
 }
 ```
+
+### Anatomy of a Java class described
+The following describes the structure of a Java class and its major parts.
+
+* Packages
+
+  A `package` declaration allows you to orgainize your Java classes into a folder-like structure which become folders on your hard-drive. Java classes are typically grouped into packages by behavior. The package declaration in a class is optional. If omitted, the Java class is in the `default` package.
+
+* Imports
+
+  An `import` statement allows you to include another Java class from outside of the package of `this` Java class.
+
+* Class declaration
+
+  A `class` declaration defines the Java class by giving it a name and possibly defining `interface`s the Java class implements and/or a Java class it `extends`.
+ 
+* Constructors
+
+  A Java class `constructor` defines the `parameter`s that are required for a Java class `instance` to be created.
+
+* Variables
+
+  Variables can be declared at various scopes within a Java `class`. The scopes within a Java `class`. Variables declared at the `instance` level are visible to all of the code within a running `instance` of the `class`. Variables declared within a `function` or method are visible to all of the code within that `function` or method. Variables declared within a `statement` are only visible within that `statement`.
+
+  It is also possible to declare `class` level variables that are available to any running `instance` of a `class`.
+
+* Functions and methods
+
+  Java class `function`s and methods define blocks of code that may receive inputs and may produce an output. A `function` and a method are both declared with the `function` keyword. The only difference being a naming convention where `function`s return a value whereas methods do not.
+
+* `new`
+
+  New instances of a Java class are created using the `new` keyword. As shown above, a new instance of `MyFirstJavaApplication` was created in the `main` function using the `new` keyword.
+
+  ```java
+  MyFirstJavaApplication app =
+      new MyFirstJavaApplication(name);
+  ```

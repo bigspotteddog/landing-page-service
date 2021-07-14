@@ -32,8 +32,8 @@ int max = Integer.MAX_VALUE; // = 2147483647
 To use numbers that can be larger or smaller than the max and min integer, use a long. To declare a `long`, use a `L` or `l` to force the number to a `long`.
 
 ```java
-Object l = 5L; // either upper case L or lower case l
-String classname = l.getClass().getName()); // = Long
+Object o = 5L; // either upper case L or lower case l
+String classname = o.getClass().getName()); // = Long
 ```
 
 Or declare a variable of type `long`
@@ -48,8 +48,8 @@ By default, a decimal number is assigned the type `double`.
 
 ```java
 // Decimal numbers default to type double
-Object c = 5.2;
-String classname = c.getClass().getName()); // = Double
+Object o = 5.2;
+String classname = o.getClass().getName()); // = Double
 double min = Double.MIN_VALUE; // = 4.9E-324
 double max = Double.MAX_VALUE; // = 1.7976931348623157E308
 ```
@@ -67,8 +67,8 @@ A float is a decimal number that has a smaller range than a double.
 You can force a number to be of type float with an `F` or `f`
 
 ```java
-Object d = 5f; // either upper case F or lower case f
-String classname = d.getClass().getName()); // = Float
+Object o = 5f; // either upper case F or lower case f
+String classname = o.getClass().getName()); // = Float
 float min = Float.MIN_VALUE; // = 1.4E-45
 float max = Float.MAX_VALUE; // = 3.4028235E38
 ```
@@ -84,8 +84,8 @@ float f = 5; // = 5f
 A boolean is a `true` or `false` variable type.
 
 ```java
-Object e = true;
-String classname = e.getClass().getName()); // = Boolean
+Object o = true;
+String classname = o.getClass().getName()); // = Boolean
 ```
 
 You can declare a variable of type boolean
@@ -101,7 +101,7 @@ A `byte` is a very small integer that is the basic building block used to repres
 ```java
 byte b = 1;
 Object o = b; // get b as an object so we can check it
-String classname = f.getClass().getName()); // = Byte
+String classname = o.getClass().getName()); // = Byte
 int min = Byte.MIN_VALUE; // = -128
 int max = Byte.MAX_VALUE; // = 127
 ```
@@ -112,8 +112,8 @@ A `short` is an integer with a smaller range than an `int`
 
 ```java
 short s = 1;
-Object g = s; // get s as an object so we can check it
-String classname = g.getClass().getName()); // = Short
+Object o = s; // get s as an object so we can check it
+String classname = o.getClass().getName()); // = Short
 int min = Short.MIN_VALUE; // = -32768
 int max = Short.MAX_VALUE; // = 32767
 ```

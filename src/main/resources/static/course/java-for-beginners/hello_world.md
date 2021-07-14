@@ -13,7 +13,7 @@ public class HelloWorld {
 
 The code above will print `Hello, World!` to the console window.
 
-### How to run this Java application
+### Exercise 1: Run a Java application
 
 To run this Java application
 

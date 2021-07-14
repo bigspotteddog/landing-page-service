@@ -94,18 +94,18 @@
                     </ol>
                   </li>
                   <li class="course-item">
-                    <div class="text"><a id="hello_world" href="#hello_world">Hello World!</a></div>
+                    <div class="text"><a id="hello_world" href="#hello_world" data-youtube="https://www.youtube.com/embed/IUsMVzjAGww">Hello World!</a></div>
                     <ol style="list-style-type: lower-alpha;">
                       <li>
                         <div class="text">HelloWorld.java</div>
                       </li>
                       <li>
-                        <div class="text">How to run it</div>
+                        <div class="text">Exercise 1: Run a Java application</div>
                       </li>
                     </ol>
                   </li>
                   <li class="course-item">
-                    <div class="text"><a id="anatomy_of_a_java_class" href="#anatomy_of_a_java_class">Anatomy of a Java Class</a></div>
+                    <div class="text"><a id="anatomy_of_a_java_class" href="#anatomy_of_a_java_class" data-youtube="https://www.youtube.com/embed/2-0_udTOWSw">Anatomy of a Java Class</a></div>
                     <ol style="list-style-type: lower-alpha;">
                       <li>
                         <div class="text">Packages</div>
@@ -128,13 +128,16 @@
                     </ol>
                   </li>
                   <li class="course-item">
-                    <div class="text"><a id="calling_functions" href="#calling_functions">Calling Functions</a></div>
+                    <div class="text"><a id="calling_functions" href="#calling_functions" data-youtube="https://www.youtube.com/embed/xIXKH5kKUVA">Calling Functions</a></div>
                     <ol style="list-style-type: lower-alpha;">
                       <li>
                         <div class="text">Calling functions in this class</div>
                       </li>
                       <li>
                         <div class="text">Calling functions in another class</div>
+                      </li>
+                      <li>
+                        <div class="text">Exercise 2: Calling functions</div>
                       </li>
                     </ol>
                   </li>
@@ -299,6 +302,14 @@
                   </li>
                   <li class="course-item">
                     <div class="text"><a id="oo" href="#oo">Object-oriented concepts</a></div>
+                    <ol style="list-style-type: lower-alpha;">
+                      <li>
+                        <div class="text">Classes</div>
+                      </li>
+                      <li>
+                        <div class="text">Object-oriented terms</div>
+                      </li>
+                    </ol>
                   </li>
                 </ol>
               </nav>
@@ -307,17 +318,17 @@
         </div>
         <div id="lesson-container" class="col-sm-9">
           <div class="row">
-            <div id="video-container" class="p-0 pb-4">
+            <div id="video-container" class="p-0 pb-4 d-none">
               <div id="video" class="ratio ratio-16x9 border">
                 <div><div id="x" class="text-center d-none"><a id="close-video" href="#">x</a></div></div>
-                <iframe id="youtube" rel="0" width="560" height="315" src="https://www.youtube.com/embed/lk24qqVWbIs?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="youtube" rel="0" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div id="video-spacer" class="ratio ratio-16x9 mb-4 d-none">
               </div>
             </div>
 
             <div id="lesson-content" class="col-sm shadow-sm border p-4">
-              <zero-md src="/course/java-for-beginners/introduction.md">
+              <zero-md id="app" manual-render>
                 <template data-merge="append">
                   <style>
                     :not(pre)>code[class*=language-], pre[class*=language-] {
@@ -367,22 +378,36 @@
       });
 
       function showDocuments(hash) {
-        hash = hash.substring(hash.indexOf('#'));
-        if (hash.startsWith('#')) {
-          hash = hash.substring(1);
+        const indexOfHash = hash.indexOf('#');
+        if (indexOfHash < 0) {
+          hash = "";
+        } else {
+          hash = hash.substring(indexOfHash);
+          if (hash.startsWith('#')) {
+            hash = hash.substring(1);
+          }
         }
-        if (hash.length > 0) {
-          const youtube = document.getElementById(hash).getAttribute("data-youtube");
-          if (youtube) {
-            document.getElementById('youtube').src = youtube + "?rel=0";
-            document.getElementById('video-container').classList.remove("d-none");
+        if (hash) {
+          const hashElement = document.getElementById(hash);
+          if (hashElement) {
+            const youtube = hashElement.getAttribute("data-youtube");
+            if (youtube) {
+              document.getElementById('youtube').src = youtube + "?rel=0";
+              document.getElementById('video-container').classList.remove("d-none");
+            } else {
+              document.getElementById('video-container').classList.add("d-none");
+            }
           } else {
             document.getElementById('video-container').classList.add("d-none");
           }
-          if (document.getElementsByTagName('zero-md')[0].shadowRoot.children.length > 1) {
-            document.getElementsByTagName('zero-md')[0].shadowRoot.children[1].innerHTML = '';
-          }
+        }
+
+        if (hash) {
           document.getElementsByTagName('zero-md')[0].src = '/course/java-for-beginners/' + hash + '.md';
+          app.render();
+        } else {
+          document.getElementsByTagName('zero-md')[0].src = '/course/java-for-beginners/introduction.md';
+          app.render();
         }
       }
 
