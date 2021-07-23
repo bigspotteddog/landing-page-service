@@ -52,3 +52,51 @@ The modulo assignment operator assigns the remainder of the dividend variable va
 int thing = 15;
 thing %= 6; // = 3
 ```
+
+### `++`
+
+#### post-incrementer
+
+A post-incrementer will increment the value by 1 and if you access the return of this operation the variable with return not incremented yet.
+
+```java
+int counter = 1;
+
+int i = counter++; // i = 1, counter = 2
+int j = counter; // j = 2
+```
+
+#### pre-incrementer
+
+A pre-incrementer will increment the value by 1 and if you acces the return of this operation the variable will return incremented.
+
+```java
+int counter = 1;
+
+int i = ++counter; // i = 2, counter = 2
+int j = counter; // j = 2
+```
+
+### `--`
+
+#### post-decrementer
+
+A post-decrementer will decrement the value by 1 and if you access the return of this operation the variable with return not decremented yet.
+
+```java
+int counter = 3;
+
+int i = counter--; // i = 3, counter = 2
+int j = counter; // j = 2
+```
+
+#### pre-decrementer
+
+A pre-decrementer will decrement the value by 1 and if you acces the return of this operation the variable will return decremented.
+
+```java
+int counter = 3;
+
+int i = --counter; // i = 2, counter = 2
+int j = counter; // j = 2
+```

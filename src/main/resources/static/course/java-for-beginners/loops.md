@@ -146,7 +146,7 @@ Fred
 Ethel
 ```
 
-## A useful example for looping
+## Exercise 5: Print a calendar using loops
 
 In this example, we will use what we have learned so far to create a calendar for the current month. We will use conditional statements, for loops and a while loop
 

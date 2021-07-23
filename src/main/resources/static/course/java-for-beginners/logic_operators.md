@@ -112,22 +112,22 @@ boolean result = !(a > b); // = true
 
 `&&` is evaluated before `||` unless there are parentheses.
 
-In this example, once `b == c` evaluates to `false`, the condition is `false` and the `||` will not be evaluated.
+In this example, `b == c && c == 5` evaluates to `false`, then `a == d` is evaluated which makes the whole condition `true` so the statement will execute.
 
 ```java
 int a = 1, b = 2, c = 3, d = 1;
 
-if (a == d && b == c || c == 3) {
-    System.out.println("This code will not execute");
+if (a == d || b == c && c == 5) {
+    System.out.println("This code will execute");
 }
 ```
 
-When we add parentheses, the condition will evaluate to `true`. While the `&&` condition in the parentheses is `false`, the `||` evaluates to `true` making the condition `true`.
+When we add parentheses, `a == d || b == c` evaluates to `true`, but `c == 5` evaluates to false making the whole condition `false` so the statement will not execute.
 
 ```java
 int a = 1, b = 2, c = 3, d = 1;
 
-if ((a == d && b == c) || c == 3) {
-    System.out.println("Now it will execute");
+if ((a == d || b == c) && c == 5) {
+    System.out.println("Now it will not execute");
 }
 ```

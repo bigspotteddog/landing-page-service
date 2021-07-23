@@ -4,11 +4,18 @@ This series of lessons are geared to take Java beginners from little or no knowl
 
 You will learn how to set up a Java development environment with Java 11 and Visual Studio Code. Then we will go through the Java language basics and programming fundmentals.
 
-For our first project we will build a simple Hello, World! application.
+By the end of these lessons, you will have learned the basic building blocks of the Java language and you can begin applying your knowledge to build Java applications.
 
-For our next project we will build a simple calculator to exercise what we have learned about Java math, Strings, and conditional logic.
+There are several exercises throughout the lessons that apply your knowledge as you progress.
 
-Finally, we will conclude with a Spring Boot web application that takes in a name from an HTML for field and returns "Hello, &lt;`name`&gt;!".
+* Exercise 1: Hello, World!
+* Exercise 2: Calling functions
+* Exercise 3: Print variable values
+* Exercise 4: Math with formulas
+* Exercise 5: Print a calendar
+* Exercise 6: Implement user login
+* Exercise 7: Build a console calculator
+* Exercise 8: Web server address book
 
 ## Our Stack
 

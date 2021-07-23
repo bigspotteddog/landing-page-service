@@ -111,7 +111,7 @@ public class VariableInClassScope {
 
 #### Loop scope
 
-Any variable defined in the for loop, it configuration and within its brackets is visible to anything within its brackets.
+Any variable defined in the for loop, its configuration and within its brackets is visible to anything within its brackets.
 
 Example
 
@@ -151,3 +151,135 @@ public class BracketScope {
   }
 }
 ```
+
+### Inheritance (`extends`)
+
+In Java, if a class is not declared `final` it can be extended to make a new class that adds functionality while having full access to the parent class public and protected members.
+
+For example, if we have a class named `Mammal` we can have a class `Lion` that inherits the traits of `Mammal` and adds traits specific to `Lion`s.
+
+```java
+public class Mammal {
+    private boolean hairOrFur = true;
+
+    public boolean hasHairOrFur() {
+        return hairOrFur;
+    }
+}
+```
+
+```java
+public class Lion extends Mammal {
+    public void roar() {
+        System.out.println("roar");
+    }
+}
+```
+
+In this case, the `Lion` instance created here has access to its parent class `Mammal` `hasHairOrFur` function.
+
+```java
+public class TestInheritance {
+    public static void main(String[] args) {
+        Lion lion = new Lion();
+        boolean hasHairOrFur = lion.hasHairOrFur(); // = true
+        lion.roar();
+    }
+}
+```
+
+### Composition (`implements`)
+
+`Composition` is preferred over `inheritence` for its maintainability and flexibility. `Composition` is implemented using the `implements` keyword to implement an `interface`. Where a class can only inherit from one class, a class can implement many interfaces.
+
+This is the `Person` interface. Classes that implement this `interface` must `implement` the `getName` function.
+
+```java
+interface Person {
+    String getName();
+}
+```
+
+This is the `Login` interface. Classes that implement this `inteface` must implement the `getUsername` and `getPassword` functions.
+
+```java
+interface Login {
+    String getUsername();
+    String getPassword();
+}
+```
+
+The `User` class below implements both the `Person` and `Login` interfaces.
+
+```java
+public class User implements Person, Login {
+    private String name;
+    private String username;
+    private String password;
+
+    public User(String name, String username, String password) {
+        this.name = name;
+        this.username = username;
+        this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+}
+```
+
+This `UserService` is used to `authenticate` a `User` when they `login`. If the `password` is equal to the `User` `password`, the login is successful.
+
+```java
+public class UserService {
+    private static Map<String, User> users = new HashMap<>();
+
+    static {
+        User user = 
+            new User("Wally", "wally@gmail.com", "abcdefg");
+        users.put(user.getUsername(), user);
+    }
+
+    public Login authenticate(
+            String username,
+            String password)
+    {
+        User user = users.get(username);
+        if (password.equals(user.getPassword())) {
+            return user;
+        }
+        // fail the program with a not found exception
+        throw new RuntimeException("User not found");
+    }
+}
+```
+
+For example, if the login is successful, print the user's name.
+
+```java
+public class TestUserLogin {
+    public static void main(String[] args) {
+        String username = args[0];
+        String password = args[1];
+        Login login = UserService
+            .authenticate(username, password);
+        User user = (User) login;
+        System.out.println("Hello, " + user.getName());
+    }
+}
+```
+
+### Exercise 6: Implement User Login
+
+For this exercise, use what you have learned so far to implement the composition example classes above. Try to implement these classes without referring back to this lesson as much as possible. Pretend that there is not something to look at and you are implementing this from scratch. Let the "create a user login" purpose guide your implementation and see if it comes out the same.
+
+The recording above includes our attempt at this exercise.

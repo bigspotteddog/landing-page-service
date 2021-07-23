@@ -22,7 +22,7 @@ For whole numbers, the default type is integer
 ```java
 // whole numbers default to type integer
 Object o = 5;
-String classname = o.getClass().getName()); // = Integer
+String classname = o.getClass().getName(); // = Integer
 int min = Integer.MIN_VALUE; // = -2147483648
 int max = Integer.MAX_VALUE; // = 2147483647
 ```
@@ -33,7 +33,9 @@ To use numbers that can be larger or smaller than the max and min integer, use a
 
 ```java
 Object o = 5L; // either upper case L or lower case l
-String classname = o.getClass().getName()); // = Long
+String classname = o.getClass().getName(); // = Long
+long min = Long.MIN_VALUE;
+long max = Long.MAX_VALUE;
 ```
 
 Or declare a variable of type `long`
@@ -49,7 +51,7 @@ By default, a decimal number is assigned the type `double`.
 ```java
 // Decimal numbers default to type double
 Object o = 5.2;
-String classname = o.getClass().getName()); // = Double
+String classname = o.getClass().getName(); // = Double
 double min = Double.MIN_VALUE; // = 4.9E-324
 double max = Double.MAX_VALUE; // = 1.7976931348623157E308
 ```
@@ -68,7 +70,7 @@ You can force a number to be of type float with an `F` or `f`
 
 ```java
 Object o = 5f; // either upper case F or lower case f
-String classname = o.getClass().getName()); // = Float
+String classname = o.getClass().getName(); // = Float
 float min = Float.MIN_VALUE; // = 1.4E-45
 float max = Float.MAX_VALUE; // = 3.4028235E38
 ```
@@ -85,7 +87,7 @@ A boolean is a `true` or `false` variable type.
 
 ```java
 Object o = true;
-String classname = o.getClass().getName()); // = Boolean
+String classname = o.getClass().getName(); // = Boolean
 ```
 
 You can declare a variable of type boolean
@@ -101,7 +103,7 @@ A `byte` is a very small integer that is the basic building block used to repres
 ```java
 byte b = 1;
 Object o = b; // get b as an object so we can check it
-String classname = o.getClass().getName()); // = Byte
+String classname = o.getClass().getName(); // = Byte
 int min = Byte.MIN_VALUE; // = -128
 int max = Byte.MAX_VALUE; // = 127
 ```
@@ -113,7 +115,7 @@ A `short` is an integer with a smaller range than an `int`
 ```java
 short s = 1;
 Object o = s; // get s as an object so we can check it
-String classname = o.getClass().getName()); // = Short
+String classname = o.getClass().getName(); // = Short
 int min = Short.MIN_VALUE; // = -32768
 int max = Short.MAX_VALUE; // = 32767
 ```
@@ -126,7 +128,7 @@ A `char` is the basic building block for a `String`
 // Characters - ASCII characters
 char c = 'a';
 Object o = c; // get c as an Object so we can check it
-String classname = o.getClass().getName()); // = Character
+String classname = o.getClass().getName(); // = Character
 ```
 
 You can also get a `char` as its `ASCII` value
@@ -134,7 +136,7 @@ You can also get a `char` as its `ASCII` value
 ```java
 int i = 'a'; // = 97
 Object o = i;
-String classname = o.getClass().getName()); // = Integer
+String classname = o.getClass().getName(); // = Integer
 ```
 
 ### Strings
@@ -166,7 +168,7 @@ To get the number of characters in a `String`
 ```java
 //                      1
 //            0123456789012
-int length = "one two three".length()); // = 13
+int length = "one two three".length(); // = 13
 ```
 
 You can get the characters in a `String`
@@ -182,7 +184,7 @@ This will get the rest of the `String` starting from the fourth character
 ```java
 //                            1
 //                  0123456789012
-String substring = "one two three".substring(4)); // = "two three"
+String substring = "one two three".substring(4); // = "two three"
 ```
 
 To get the middle part of a `String`
@@ -192,25 +194,25 @@ This will get from the fourth character up to but not including the seventh char
 ```java
 //                            1
 //                  0123456789012
-String substring = "one two three".substring(4, 7)); // = "two"
+String substring = "one two three".substring(4, 7); // = "two"
 ```
 
 To find out if a `String` starts with a certain `String`
 
 ```java
-boolean startsWith = "one two three".startsWith("one")); // = true
+boolean startsWith = "one two three".startsWith("one"); // = true
 ```
 
 To find out if a `String` ends with a certain `String`
 
 ```java
-boolean endsWith = "one two three".endsWith("three")); // = true
+boolean endsWith = "one two three".endsWith("three"); // = true
 ```
 
 To replace a `String` in a `String`
 
 ```java
-String replace = "one two three".replace("two", "too"));
+String replace = "one two three".replace("two", "too");
 // = "one too three"
 ```
 
@@ -277,7 +279,7 @@ String day = now.getDayOfWeek().toString(); // = SUNDAY
 To get the day of the year from the date `now`
 
 ```java
-int dayOfYear = now.getDayOfYear()) // = 178
+int dayOfYear = now.getDayOfYear() // = 178
 ```
 
 To create a date from a `String`
@@ -479,3 +481,42 @@ To replace the value for "Ricky"
 map.put("Ricky", 89);
 int score = map.get("Ricky"); // = 89
 ```
+
+## Exercise 3: Print Variable Values
+
+For this exercise, take our `Hello, World!` application and,
+
+### Primitives
+* Print out a variable value of each primitive type,
+* Check the minimum and maximum values of type `Long` and print them out
+
+### Strings
+
+* Create a `String` sentence and assign it to a variable then,
+  * Print out the sentence `.length()`,
+  * Replace the third word in the sentence with a different word and print out the sentence,
+  * `Split` the sentence into an array of its words,
+  * Print out the array of words,
+  * Print out the fourth word in the sentence
+
+### Dates
+
+* Create a new `Date` and assign it to a variable that represents right `now`,
+  * Print out the date variable,
+  * Get the month for the date variable
+
+### Lists
+
+* Create an `ArrayList` variable of type `Integer`,
+  * Add 5 numbers to the list in random order,
+  * Use the `Collections` class to sort the list,
+  * Print out the list to see the new sorted order
+
+### Maps
+
+* Create a Map with `String` keys and `String` values,
+  * Add names as keys and addresses as values to create an address book,
+  * Print out the map to see the address book,
+  * Print out the `.size()` of the map to see how many addresses are in the book,
+  * Get an address for one of the names in the map,
+  * Print out the address
