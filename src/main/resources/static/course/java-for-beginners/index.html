@@ -83,16 +83,16 @@
               <nav>
                 <ol>
                   <li class="course-item">
-                    <div class="text"><a id="introduction" href="#introduction">Introduction</a></div>
+                    <div class="text"><a id="introduction" href="#introduction" data-youtube="https://www.youtube.com/embed/xPd9kLczmxo">Introduction</a></div>
                   </li>
                   <li class="course-item">
-                    <div class="text"><a id="how_to_setup_a_java_development_environment" href="#how_to_setup_a_java_development_environment" data-youtube="https://www.youtube.com/embed/xcojoAJ157Y">How to set up a Java development environment</a> (6:38)</div>
+                    <div class="text"><a id="how_to_setup_a_java_development_environment" href="#how_to_setup_a_java_development_environment" data-youtube="https://www.youtube.com/embed/xcojoAJ157Y">How to set up a Java development environment</a></div>
                     <ol style="list-style-type: lower-alpha;">
                       <li>
-                        <div class="text">How to install Java 11 (2:42)</div>
+                        <div class="text">How to install Java 11</div>
                       </li>
                       <li>
-                        <div class="text">How to install Visual Studio Code (3:52)</div>
+                        <div class="text">How to install Visual Studio Code</div>
                       </li>
                     </ol>
                   </li>
@@ -330,7 +330,10 @@
                     </ol>
                   </li>
                   <li class="course-item">
-                    <div class="text"><a id="console_calculator" href="#console_calculator">Exercise 7: Console calculator</a></div>
+                    <div class="text"><a id="console_calculator" href="#console_calculator" data-youtube="https://www.youtube.com/embed/s4D6U-lergQ">Exercise 7: Console calculator</a></div>
+                  </li>
+                  <li class="course-item">
+                    <div class="text"><a id="web_server_address_book" href="#web_server_address_book">Exercise 8: Full stack address book</a></div>
                   </li>
                 </ol>
               </nav>
@@ -385,6 +388,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
     <script>
+      window.addEventListener("hashchange", function(e) {
+        setTimeout(function() {
+          scroll(0, 0);
+        }, 100);
+        let hash = e.newURL;
+        showDocuments(hash);
+      }, false);
+
       document.addEventListener('scroll', function(e) {
         const container = document.getElementById('video-container');
         const rect = container.getBoundingClientRect();
@@ -436,18 +447,9 @@
           document.getElementsByTagName('zero-md')[0].src = hash + '.md';
           app.render();
         } else {
-          document.getElementsByTagName('zero-md')[0].src = 'introduction.md';
-          app.render();
+          window.location.hash = "#introduction";
         }
       }
-
-      window.addEventListener("hashchange", function(e) {
-        setTimeout(function() {
-          scroll(0, 0);
-        }, 100);
-        let hash = e.newURL;
-        showDocuments(hash);
-      }, false);
 
       document.getElementsByTagName('zero-md')[0].addEventListener('zero-md-error', function(e) {
         document.getElementsByTagName('zero-md')[0].src = 'placeholder.md';
