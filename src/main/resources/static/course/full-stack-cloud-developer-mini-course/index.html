@@ -67,7 +67,7 @@
 
     <nav id="nav-bar" class="navbar navbar-dark bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand fs-2" href="/">Full Stack Cloud Developer - Mini Course</a> <a href="/">Show me the finished project</a>
+        <a class="navbar-brand fs-2" href="/">Full Stack Cloud Developer - Mini Course</a>
       </div>
     </nav>
 
@@ -235,6 +235,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
     <script>
+      window.addEventListener("hashchange", function(e) {
+        setTimeout(function() {
+          scroll(0, 0);
+        }, 100);
+        let hash = e.newURL;
+        showDocuments(hash);
+      }, false);
+
       document.addEventListener('scroll', function(e) {
         const container = document.getElementById('video-container');
         const rect = container.getBoundingClientRect();
@@ -258,27 +266,37 @@
       });
 
       function showDocuments(hash) {
-        hash = hash.substring(hash.indexOf('#'));
-        if (hash.startsWith('#')) {
-          hash = hash.substring(1);
-        }
-        if (hash.length > 0) {
-          const youtube = document.getElementById(hash).getAttribute("data-youtube");
-          if (youtube) {
-            document.getElementById('youtube').src = youtube + "?rel=0";
+        const indexOfHash = hash.indexOf('#');
+        if (indexOfHash < 0) {
+          hash = "";
+        } else {
+          hash = hash.substring(indexOfHash);
+          if (hash.startsWith('#')) {
+            hash = hash.substring(1);
           }
-          document.getElementsByTagName('zero-md')[0].src = '';
-          document.getElementsByTagName('zero-md')[0].src = '/course/full-stack-cloud-developer-mini-course/' + hash + '.md';
+        }
+        if (hash) {
+          const hashElement = document.getElementById(hash);
+          if (hashElement) {
+            const youtube = hashElement.getAttribute("data-youtube");
+            if (youtube) {
+              document.getElementById('youtube').src = youtube + "?rel=0";
+              document.getElementById('video-container').classList.remove("d-none");
+            } else {
+              document.getElementById('video-container').classList.add("d-none");
+            }
+          } else {
+            document.getElementById('video-container').classList.add("d-none");
+          }
+        }
+
+        if (hash) {
+          document.getElementsByTagName('zero-md')[0].src = hash + '.md';
+          app.render();
+        } else {
+          window.location.hash = "#introduction";
         }
       }
-
-      window.addEventListener("hashchange", function(e) {
-        setTimeout(function() {
-          scroll(0, 0);
-        }, 100);
-        let hash = e.newURL;
-        showDocuments(hash);
-      }, false);
 
       document.getElementsByTagName('zero-md')[0].addEventListener('zero-md-error', function(e) {
         document.getElementsByTagName('zero-md')[0].src = 'placeholder.md';
